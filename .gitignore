@@ -1,0 +1,21 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Env / secrets
+.env
+.env.*
+!.env.example
+**/.env.local
+
+# Node
+node_modules/
+.next/
+
+# OS / editor
+.DS_Store
+
+# Scraped raw HTML snapshots
+data/raw/*.html

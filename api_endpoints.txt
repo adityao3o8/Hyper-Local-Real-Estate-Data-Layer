@@ -1,0 +1,207 @@
+# Kaveri portal API endpoints
+# Captured: 2026-06-01T10:04:25
+# Base URL: https://kaveri.karnataka.gov.in
+# Method: Playwright network capture (XHR/fetch on page load only)
+
+# NOTE: https://kaverionline.karnataka.gov.in failed: APIRequestContext.get: connect ECONNREFUSED ::ffff:103.138.196.38:443
+Call log:
+  - → GET https://kaverionline.karnataka.gov.in/landing-page
+    - user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+    - accept: */*
+    - accept-encoding: gzip,deflate,br
+
+# NOTE: https://kaverionline.karnataka.gov.in unreachable; using https://kaveri.karnataka.gov.in (same Kaveri 2.0 portal).
+# NOTE: Found 9 EC-related UI references on landing page.
+# NOTE:   EC ref: text='Esigning Facility For Online EC Online CC' href='https://kaveri.karnataka.gov.in/#'
+# NOTE:   EC ref: text='Apply for EC Online for Period Before 2004' href='https://youtu.be/4zIV9gYrDa8?si=O34PDdM3v5Ns1neR'
+# NOTE:   EC ref: text='EC Search' href='EC'
+# NOTE:   EC ref: text='Select' href=''
+# NOTE:   EC ref: text='eSigning Facility for Online EC and Online CC' href='https://igr.karnataka.gov.in/info-2/Fees/EC+and+CC+Fee/en'
+# NOTE: Property valuation panel opened via click; captured its XHR/fetch calls.
+# NOTE: Dedicated EC routes (/ec-search, /guest/ec-search, etc.) all serve the same SPA shell — no EC-specific public API calls on load.
+# NOTE: Transaction-level APIs (FetchMarketandFeeData, GetRegisteredDocumentCount, GetValuationData) require Authorization token — not exposed on public load.
+
+## Homepage
+ENDPOINT: GET https://kaveri.karnataka.gov.in/api/GetDashboardStatsFY
+FULL_URL: https://kaveri.karnataka.gov.in/api/GetDashboardStatsFY
+STATUS: 200
+RESOURCE_TYPE: xhr
+REQUEST_HEADERS:
+  accept: application/json, text/plain, */*
+  referer: https://kaveri.karnataka.gov.in/
+  user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+RESPONSE_HEADERS:
+  content-type: application/json; charset=utf-8
+RESPONSE_PREVIEW: [{"applicationtypeid":1,"applicationtypename":"Document Registration","bookid":5,"bookname":"Book-1(Memos)","cnt_totalapplication":36855},{"applicationtypeid":1,"applicationtypename":"Document Registration","bookid":9,"bookname":"Book-1 Part-IV ","cnt_totalapplication":435112},{"applicationtypeid":1,"applicationtypename":"Document Registration","bookid":1,"bookname":"Book-1","cnt_totalapplication":2620234},{"applicationtypeid":1,"applicationtypename":"Document Registration","bookid":3,"bookname"
+---
+
+## Homepage
+ENDPOINT: GET https://kaveri.karnataka.gov.in/api/GetRevenueGenerated
+FULL_URL: https://kaveri.karnataka.gov.in/api/GetRevenueGenerated
+STATUS: 200
+RESOURCE_TYPE: xhr
+REQUEST_HEADERS:
+  accept: application/json, text/plain, */*
+  referer: https://kaveri.karnataka.gov.in/
+  user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+RESPONSE_HEADERS:
+  content-type: application/json; charset=utf-8
+RESPONSE_PREVIEW: [{"feesname":"Registration Fee","feerulecode":1,"feesamount":10426550257.7700},{"feesname":"Stamp Duty","feerulecode":36,"feesamount":26315474304.9700}]
+---
+
+## Homepage
+ENDPOINT: POST https://kaveri.karnataka.gov.in/api/getgender
+FULL_URL: https://kaveri.karnataka.gov.in/api/getgender
+STATUS: 200
+RESOURCE_TYPE: xhr
+POST_DATA: {"headers":{"normalizedNames":{},"lazyUpdate":null,"headers":{},"lazyInit":null}}
+REQUEST_HEADERS:
+  accept: application/json, text/plain, */*
+  content-type: application/json
+  referer: https://kaveri.karnataka.gov.in/
+  user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+RESPONSE_HEADERS:
+  content-type: application/json; charset=utf-8
+RESPONSE_PREVIEW: [{"genderid":0,"descriptione":"Female"},{"genderid":1,"descriptione":"Male"},{"genderid":2,"descriptione":"Transgender"}]
+---
+
+## Homepage
+ENDPOINT: POST https://kaveri.karnataka.gov.in/api/GetSecurityDatayAsync
+FULL_URL: https://kaveri.karnataka.gov.in/api/GetSecurityDatayAsync
+STATUS: 200
+RESOURCE_TYPE: xhr
+POST_DATA: {"headers":{"normalizedNames":{},"lazyUpdate":null,"headers":{},"lazyInit":null}}
+REQUEST_HEADERS:
+  accept: application/json, text/plain, */*
+  content-type: application/json
+  referer: https://kaveri.karnataka.gov.in/
+  user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+RESPONSE_HEADERS:
+  content-type: application/json; charset=utf-8
+RESPONSE_PREVIEW: [{"securityqstid":1,"questione":"When is your date of birth?","questionk":null,"crtusr":null,"crtdt":"10/04/2021 16:51:37"},{"securityqstid":2,"questione":"What is your favourite movie?","questionk":null,"crtusr":null,"crtdt":"10/04/2021 16:51:37"},{"securityqstid":3,"questione":"What is your mother maiden name?","questionk":null,"crtusr":null,"crtdt":"10/04/2021 16:51:37"},{"securityqstid":4,"questione":"What is your favourite cricket team?","questionk":null,"crtusr":null,"crtdt":"10/04/2021 16
+---
+
+## Homepage
+ENDPOINT: GET https://kaveri.karnataka.gov.in/api/GetLiveOffices
+FULL_URL: https://kaveri.karnataka.gov.in/api/GetLiveOffices
+STATUS: 200
+RESOURCE_TYPE: xhr
+REQUEST_HEADERS:
+  accept: application/json
+  content-type: application/json
+  referer: https://kaveri.karnataka.gov.in/
+  user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+RESPONSE_HEADERS:
+  content-type: application/json; charset=utf-8
+RESPONSE_PREVIEW: [{"id":0,"distritcode":0,"registrationdistrict":"Bijapur","liveoffices":"SRO Tikota"},{"id":0,"distritcode":0,"registrationdistrict":"Raichur","liveoffices":"SRO Siravara"},{"id":0,"distritcode":0,"registrationdistrict":"Koppal","liveoffices":"SRO Kanakagiri"},{"id":0,"distritcode":0,"registrationdistrict":"Tumkur","liveoffices":"SRO Gubbi"},{"id":0,"distritcode":0,"registrationdistrict":"Tumkur","liveoffices":"SRO Madhugiri"},{"id":0,"distritcode":0,"registrationdistrict":"Tumkur","liveoffices"
+---
+
+## Homepage
+ENDPOINT: GET https://kaveri.karnataka.gov.in/api/GetCitizenDashboard
+FULL_URL: https://kaveri.karnataka.gov.in/api/GetCitizenDashboard?ApplicationTypeid=13&FromDate=2026-05-31&ToDate=2026-06-01&PropertyTypeid=0&SroCode=
+STATUS: 200
+RESOURCE_TYPE: xhr
+REQUEST_HEADERS:
+  accept: application/json, text/plain, */*
+  referer: https://kaveri.karnataka.gov.in/
+  user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+RESPONSE_HEADERS:
+  content-type: application/json; charset=utf-8
+RESPONSE_PREVIEW: {"data":{"applicationsReceived":0,"applicationsApproved":0,"applicationsPending":0,"applicationsReceived_Male":null,"applicationsReceived_Female":null,"applicationsReceived_Other":0,"applicationsApproved_Male":0,"applicationsApproved_Female":0,"applicationsApproved_Other":null,"male":0,"female":0,"other":0,"averageTime":"","medianTime":" ","minTime":" ","maxTime":" "},"responseCode":1000,"responseMessage":"Data Fetched Successfully."}
+---
+
+## Homepage
+ENDPOINT: POST https://kaveri.karnataka.gov.in/api/GetSROMasterAsync
+FULL_URL: https://kaveri.karnataka.gov.in/api/GetSROMasterAsync
+STATUS: 200
+RESOURCE_TYPE: xhr
+POST_DATA: {"headers":{"normalizedNames":{},"lazyUpdate":null,"headers":{},"lazyInit":null}}
+REQUEST_HEADERS:
+  accept: application/json, text/plain, */*
+  content-type: application/json
+  referer: https://kaveri.karnataka.gov.in/
+  user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+RESPONSE_HEADERS:
+  content-type: application/json; charset=utf-8
+RESPONSE_PREVIEW: [{"srocode":24,"sronamek":"ಶಿಡ್ಲಘಟ್ಟ","sronamee":"Shidlaghatta","shortnamee":"SDG","ispaperless":false},{"srocode":104,"sronamek":"ಮುಂಡರಗಿ","sronamee":"Mundaragi","shortnamee":"MUN","ispaperless":false},{"srocode":185,"sronamek":"ಬೆಳ್ತಂಗಡಿ","sronamee":"Beltangadi","shortnamee":"BLT","ispaperless":false},{"srocode":157,"sronamek":"ಸಾಗರ","sronamee":"Sagara","shortnamee":"SGR","ispaperless":false},{"srocode":195,"sronamek":"ಹಿರಿಯೂರು","sronamee":"Hiriyur","shortnamee":"HYR","ispaperless":false},{"sr
+---
+
+## Homepage
+ENDPOINT: POST https://kaveri.karnataka.gov.in/api/GetBhoomiVillage
+FULL_URL: https://kaveri.karnataka.gov.in/api/GetBhoomiVillage
+STATUS: 200
+RESOURCE_TYPE: xhr
+POST_DATA: {}
+REQUEST_HEADERS:
+  accept: application/json
+  content-type: application/json
+  referer: https://kaveri.karnataka.gov.in/
+  user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+RESPONSE_HEADERS:
+  content-type: application/json; charset=utf-8
+RESPONSE_PREVIEW: []
+---
+
+## Property valuation panel open
+ENDPOINT: POST https://kaveri.karnataka.gov.in/api/GetRegistrationDistrict
+FULL_URL: https://kaveri.karnataka.gov.in/api/GetRegistrationDistrict
+STATUS: 200
+RESOURCE_TYPE: xhr
+POST_DATA: {}
+REQUEST_HEADERS:
+  accept: application/json
+  content-type: application/json
+  referer: https://kaveri.karnataka.gov.in/
+  user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+RESPONSE_HEADERS:
+  content-type: application/json; charset=utf-8
+RESPONSE_PREVIEW: []
+---
+
+## Property valuation panel open
+ENDPOINT: POST https://kaveri.karnataka.gov.in/api/GetDistrictAsync
+FULL_URL: https://kaveri.karnataka.gov.in/api/GetDistrictAsync
+STATUS: 200
+RESOURCE_TYPE: xhr
+POST_DATA: {"headers":{"normalizedNames":{},"lazyUpdate":null,"headers":{},"lazyInit":null}}
+REQUEST_HEADERS:
+  accept: application/json, text/plain, */*
+  content-type: application/json
+  referer: https://kaveri.karnataka.gov.in/
+  user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+RESPONSE_HEADERS:
+  content-type: application/json; charset=utf-8
+RESPONSE_PREVIEW: [{"districtCode":11,"districtNamee":"Bagalkot","districtNamek":"ಬಾಗಲಕೋಟೆ","bhoomiDistrictCode":"2"},{"districtCode":2,"districtNamee":"Bangalore Rural","districtNamek":"ಬೆಂಗಳೂರು ಗ್ರಾಮಾಂತರ","bhoomiDistrictCode":"21"},{"districtCode":1,"districtNamee":"Basavanagudi","districtNamek":"ಬಸವನಗುಡಿ","bhoomiDistrictCode":"20"},{"districtCode":7,"districtNamee":"Belgaum","districtNamek":"ಬೆಳಗಾವಿ","bhoomiDistrictCode":"1"},{"districtCode":8,"districtNamee":"Bellary","districtNamek":"ಬಳ್ಳಾರಿ","bhoomiDistrict
+---
+
+## Property valuation panel open
+ENDPOINT: POST https://kaveri.karnataka.gov.in/api/GetBhoomiDistrict
+FULL_URL: https://kaveri.karnataka.gov.in/api/GetBhoomiDistrict
+STATUS: 200
+RESOURCE_TYPE: xhr
+POST_DATA: {"headers":{"normalizedNames":{},"lazyUpdate":null,"headers":{},"lazyInit":null}}
+REQUEST_HEADERS:
+  accept: application/json, text/plain, */*
+  content-type: application/json
+  referer: https://kaveri.karnataka.gov.in/
+  user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+RESPONSE_HEADERS:
+  content-type: application/json; charset=utf-8
+RESPONSE_PREVIEW: [{"districtcode":2,"districtnamee":"Bagalkote","districtnamek":"Bagalkote","shortnamee":null,"shortnamek":null,"digcode":null,"bhoomidistrictcode":null,"k1k2_flag":2},{"districtcode":21,"districtnamee":"Bangalore Rural","districtnamek":"Bangalore Rural","shortnamee":null,"shortnamek":null,"digcode":null,"bhoomidistrictcode":null,"k1k2_flag":2},{"districtcode":20,"districtnamee":"Bangalore Urban","districtnamek":"Bangalore Urban","shortnamee":null,"shortnamek":null,"digcode":null,"bhoomidistrictc
+---
+
+## Property valuation panel open
+ENDPOINT: POST https://kaveri.karnataka.gov.in/api/GetVillageAsync
+FULL_URL: https://kaveri.karnataka.gov.in/api/GetVillageAsync
+STATUS: 200
+RESOURCE_TYPE: xhr
+POST_DATA: {}
+REQUEST_HEADERS:
+  accept: application/json
+  content-type: application/json
+  referer: https://kaveri.karnataka.gov.in/
+  user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+RESPONSE_HEADERS:
+  content-type: application/json; charset=utf-8
+RESPONSE_PREVIEW: [{"villagecode":15493,"villagenamek":"ÊëÁ™ßæâå ŠÜÈó. ’ð","villagenamee":"Budihal S.K.","ulbcode":17,"sroCode":99,"bhoomitalukcode":0,"bhoomiDistrictCode":2,"bhoomivillagecode":0,"isurban":false},{"villagecode":15493,"villagenamek":"ÊëÁ™ßæâå ŠÜÈó. ’ð","villagenamee":"Budihal S.K.","ulbcode":246,"sroCode":99,"bhoomitalukcode":0,"bhoomiDistrictCode":2,"bhoomivillagecode":0,"isurban":false},{"villagecode":15493,"villagenamek":"ÊëÁ™ßæâå ŠÜÈó. ’ð","villagenamee":"Budihal S.K.","ulbcode":248,"sroCode":
+---

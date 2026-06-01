@@ -1,0 +1,4249 @@
+{
+  "generated_at": "2026-06-01T06:37:50.619595+00:00",
+  "source_osm": "data/raw/osm_bangalore.json",
+  "localities_scored": 174,
+  "localities_failed": 16,
+  "localities_total": 190,
+  "scores": [
+    {
+      "locality": "1st Sector HSR Layout",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 20,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 154,
+        "school": 180,
+        "park": 128,
+        "metro": 5
+      },
+      "centre": {
+        "lat": 12.9105609,
+        "lon": 77.6271039
+      },
+      "details": {
+        "geocoded_as": "State Bank of India, 1st Main Road, MCHS Colony, Sector 7, HSR Layout, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560068, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "4th Block, 5th Block Jayanagar",
+      "error": "Could not geocode locality: 4th Block, 5th Block Jayanagar"
+    },
+    {
+      "locality": "Adugodi",
+      "neighbourhood_score": 88.8,
+      "rera_score": 75.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 0,
+      "avg_complaints": null,
+      "amenity_counts": {
+        "hospital": 188,
+        "school": 241,
+        "park": 102,
+        "metro": 0
+      },
+      "centre": {
+        "lat": 12.9440234,
+        "lon": 77.6088867
+      },
+      "details": {
+        "geocoded_as": "Adugodi, A Adugodi, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560030, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Agara",
+      "neighbourhood_score": 99.6,
+      "rera_score": 99.1,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 222,
+      "avg_complaints": 0.07,
+      "amenity_counts": {
+        "hospital": 92,
+        "school": 106,
+        "park": 100,
+        "metro": 4
+      },
+      "centre": {
+        "lat": 12.9091524,
+        "lon": 77.6438684
+      },
+      "details": {
+        "geocoded_as": "Agara, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560102, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Anjanapura",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 1,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 10,
+        "school": 31,
+        "park": 44,
+        "metro": 4
+      },
+      "centre": {
+        "lat": 12.8601312,
+        "lon": 77.5540587
+      },
+      "details": {
+        "geocoded_as": "Anjanapura, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560108, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Appareddypalya",
+      "neighbourhood_score": 88.8,
+      "rera_score": 75.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 0,
+      "avg_complaints": null,
+      "amenity_counts": {
+        "hospital": 164,
+        "school": 151,
+        "park": 100,
+        "metro": 5
+      },
+      "centre": {
+        "lat": 12.9741197,
+        "lon": 77.6374384
+      },
+      "details": {
+        "geocoded_as": "GHPS Appareddypalya, Appareddypalya, Jogpalya, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560038, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Arakere",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 2,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 68,
+        "school": 143,
+        "park": 4,
+        "metro": 0
+      },
+      "centre": {
+        "lat": 12.8854515,
+        "lon": 77.6034249
+      },
+      "details": {
+        "geocoded_as": "Arakere, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "aralakunate",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 1,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 84,
+        "school": 97,
+        "park": 81,
+        "metro": 3
+      },
+      "centre": {
+        "lat": 12.8982752,
+        "lon": 77.6515095
+      },
+      "details": {
+        "geocoded_as": "GHPS Aralakunate, aralakunate, Hosapalya, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560068, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Arekempanahalli",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 1,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 251,
+        "school": 268,
+        "park": 120,
+        "metro": 5
+      },
+      "centre": {
+        "lat": 12.9446007,
+        "lon": 77.594691
+      },
+      "details": {
+        "geocoded_as": "GUMPS Tank Garden Arekempanahalli, Arekempanahalli, Someshwara Nagara, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560029, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Arekere",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 2,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 79,
+        "school": 154,
+        "park": 103,
+        "metro": 1
+      },
+      "centre": {
+        "lat": 12.8872086,
+        "lon": 77.5960493
+      },
+      "details": {
+        "geocoded_as": "Arekere, Doresanipalya, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560076, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Ashok Nagar",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 2,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 152,
+        "school": 236,
+        "park": 106,
+        "metro": 6
+      },
+      "centre": {
+        "lat": 12.9694359,
+        "lon": 77.6092319
+      },
+      "details": {
+        "geocoded_as": "Ashok Nagar, Ashokanagar, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560025, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Ashwath Nagar",
+      "neighbourhood_score": 98.9,
+      "rera_score": 97.6,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 10,
+      "avg_complaints": 0.2,
+      "amenity_counts": {
+        "hospital": 84,
+        "school": 81,
+        "park": 57,
+        "metro": 2
+      },
+      "centre": {
+        "lat": 12.9619639,
+        "lon": 77.6988922
+      },
+      "details": {
+        "geocoded_as": "Ashwath Nagar, Bengaluru East City Corporation, Bengaluru, Bangalore East, Bengaluru Urban, Karnataka, 560037, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Austin Town",
+      "neighbourhood_score": 88.8,
+      "rera_score": 75.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 0,
+      "avg_complaints": null,
+      "amenity_counts": {
+        "hospital": 162,
+        "school": 226,
+        "park": 120,
+        "metro": 4
+      },
+      "centre": {
+        "lat": 12.9612736,
+        "lon": 77.6152935
+      },
+      "details": {
+        "geocoded_as": "Austin Town, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560047, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "B T M Layout",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 25,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 177,
+        "school": 215,
+        "park": 137,
+        "metro": 6
+      },
+      "centre": {
+        "lat": 12.9190975,
+        "lon": 77.6148608
+      },
+      "details": {
+        "geocoded_as": "Jnanadegula HPS, B T M Layout W No 65, BTM Layout, Viswamanava Kuvempu Ward, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560076, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Bagmane Solarium City",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 4,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 78,
+        "school": 90,
+        "park": 54,
+        "metro": 6
+      },
+      "centre": {
+        "lat": 12.9702327,
+        "lon": 77.7088405
+      },
+      "details": {
+        "geocoded_as": "Bagmane Solarium City, EPIP Zone, Bharath Aikya Ward, Bengaluru East City Corporation, Bengaluru, Bangalore East, Bengaluru Urban, Karnataka, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Banashankari",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 6,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 212,
+        "school": 106,
+        "park": 106,
+        "metro": 5
+      },
+      "centre": {
+        "lat": 12.9278196,
+        "lon": 77.556621
+      },
+      "details": {
+        "geocoded_as": "Banashankari, Kathriguppe, Bengaluru West City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560085, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Bandepalya",
+      "neighbourhood_score": 88.8,
+      "rera_score": 75.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 0,
+      "avg_complaints": null,
+      "amenity_counts": {
+        "hospital": 27,
+        "school": 75,
+        "park": 33,
+        "metro": 4
+      },
+      "centre": {
+        "lat": 12.8804001,
+        "lon": 77.6491258
+      },
+      "details": {
+        "geocoded_as": "Bandepalya, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Basapura",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 3,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 31,
+        "school": 60,
+        "park": 19,
+        "metro": 5
+      },
+      "centre": {
+        "lat": 12.8686664,
+        "lon": 77.6441741
+      },
+      "details": {
+        "geocoded_as": "Basapura Lake, Chikkathoguru, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Basavanapura",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 1,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 66,
+        "school": 60,
+        "park": 36,
+        "metro": 3
+      },
+      "centre": {
+        "lat": 13.0093485,
+        "lon": 77.7108379
+      },
+      "details": {
+        "geocoded_as": "Basavanapura, Bengaluru East City Corporation, Bengaluru, Bangalore East, Bengaluru Urban, Karnataka, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Basavangudi",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 2,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 302,
+        "school": 181,
+        "park": 97,
+        "metro": 8
+      },
+      "centre": {
+        "lat": 12.9421868,
+        "lon": 77.5742576
+      },
+      "details": {
+        "geocoded_as": "Basavangudi Police Station, Krishna Rao Park Walk Trail, Gandhi Bazaar, Basavanagudi, Sunkenahalli, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560004, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Begur",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 2,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 13,
+        "school": 73,
+        "park": 57,
+        "metro": 0
+      },
+      "centre": {
+        "lat": 12.8633887,
+        "lon": 77.6130112
+      },
+      "details": {
+        "geocoded_as": "Begur, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Begur Hobli",
+      "error": "Could not geocode locality: Begur Hobli"
+    },
+    {
+      "locality": "Bellandur",
+      "neighbourhood_score": 88.8,
+      "rera_score": 75.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 0,
+      "avg_complaints": null,
+      "amenity_counts": {
+        "hospital": 50,
+        "school": 43,
+        "park": 59,
+        "metro": 0
+      },
+      "centre": {
+        "lat": 12.9320495,
+        "lon": 77.6842915
+      },
+      "details": {
+        "geocoded_as": "Bellandur, Bengaluru East City Corporation, Bengaluru, Bangalore East, Bengaluru Urban, Karnataka, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Benson Town",
+      "neighbourhood_score": 88.8,
+      "rera_score": 75.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 0,
+      "avg_complaints": null,
+      "amenity_counts": {
+        "hospital": 102,
+        "school": 130,
+        "park": 80,
+        "metro": 3
+      },
+      "centre": {
+        "lat": 12.997343,
+        "lon": 77.6036815
+      },
+      "details": {
+        "geocoded_as": "Benson Town, Jayamahal, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560046, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Beratena Agrahara",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 1,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 34,
+        "school": 58,
+        "park": 24,
+        "metro": 5
+      },
+      "centre": {
+        "lat": 12.8642294,
+        "lon": 77.6575832
+      },
+      "details": {
+        "geocoded_as": "Beratena Agrahara, Hosur Road, Chikkathoguru, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560100, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Bettadasana Pura",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 2,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 8,
+        "school": 16,
+        "park": 14,
+        "metro": 0
+      },
+      "centre": {
+        "lat": 12.8405143,
+        "lon": 77.6310921
+      },
+      "details": {
+        "geocoded_as": "GHPS Bettadasana Pura, Bettadasana Pura, Bangalore South, Bengaluru Urban, Karnataka, 560100, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Bhartiya City",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 4,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 15,
+        "school": 63,
+        "park": 44,
+        "metro": 0
+      },
+      "centre": {
+        "lat": 13.0820649,
+        "lon": 77.6412323
+      },
+      "details": {
+        "geocoded_as": "Bhartiya City, Sampigehalli, Bengaluru North City Corporation, Bengaluru, Yelahanka taluku, Bengaluru Urban, Karnataka, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Bilekahalli",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 1,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 158,
+        "school": 182,
+        "park": 115,
+        "metro": 6
+      },
+      "centre": {
+        "lat": 12.9046331,
+        "lon": 77.6070945
+      },
+      "details": {
+        "geocoded_as": "Bilekahalli, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Bilekalli",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 1,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 150,
+        "school": 193,
+        "park": 114,
+        "metro": 6
+      },
+      "centre": {
+        "lat": 12.900731,
+        "lon": 77.6047963
+      },
+      "details": {
+        "geocoded_as": "Ankith HPS Bilekalli, Bilekalli, Bilekahalli, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560076, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Bommana Halli cmc",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 1,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 68,
+        "school": 149,
+        "park": 101,
+        "metro": 0
+      },
+      "centre": {
+        "lat": 12.8838456,
+        "lon": 77.5952932
+      },
+      "details": {
+        "geocoded_as": "Janak Vidyalaya, Bommana Halli Cmc, Bommana Halli cmc, Doresanipalya, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560076, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Bommanahalli",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 3,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 138,
+        "school": 178,
+        "park": 113,
+        "metro": 6
+      },
+      "centre": {
+        "lat": 12.9034581,
+        "lon": 77.6230028
+      },
+      "details": {
+        "geocoded_as": "Bommanahalli, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "BommanaHalli Cmc",
+      "error": "Could not geocode locality: BommanaHalli Cmc"
+    },
+    {
+      "locality": "Brigade Gardania",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 1,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 72,
+        "school": 143,
+        "park": 107,
+        "metro": 4
+      },
+      "centre": {
+        "lat": 12.887736,
+        "lon": 77.5784972
+      },
+      "details": {
+        "geocoded_as": "Augusta Club, Brigade Gardania, Brigade Gardenia Park, RBI Layout, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560078, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Brigade Meadows",
+      "neighbourhood_score": 89.2,
+      "rera_score": 76.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 2,
+      "avg_complaints": 2.0,
+      "amenity_counts": {
+        "hospital": 10,
+        "school": 7,
+        "park": 11,
+        "metro": 0
+      },
+      "centre": {
+        "lat": 12.8140343,
+        "lon": 77.5077472
+      },
+      "details": {
+        "geocoded_as": "Brigade Meadows, Kaggalipura, Udayapura, Bangalore South, Bengaluru Urban, Karnataka, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Brookefield",
+      "neighbourhood_score": 88.8,
+      "rera_score": 75.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 0,
+      "avg_complaints": null,
+      "amenity_counts": {
+        "hospital": 77,
+        "school": 88,
+        "park": 45,
+        "metro": 5
+      },
+      "centre": {
+        "lat": 12.9652094,
+        "lon": 77.717936
+      },
+      "details": {
+        "geocoded_as": "Brookefield, Priyadarshini Ward, Bengaluru East City Corporation, Bengaluru, Bangalore East, Bengaluru Urban, Karnataka, 560037, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "BTM Layout",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 15,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 193,
+        "school": 206,
+        "park": 10,
+        "metro": 0
+      },
+      "centre": {
+        "lat": 12.9140008,
+        "lon": 77.6102821
+      },
+      "details": {
+        "geocoded_as": "BTM Layout, Viswamanava Kuvempu Ward, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560076, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Byatarayanapura",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 4,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 71,
+        "school": 62,
+        "park": 78,
+        "metro": 0
+      },
+      "centre": {
+        "lat": 13.068322,
+        "lon": 77.591006
+      },
+      "details": {
+        "geocoded_as": "Byatarayanapura, Bengaluru North City Corporation, Bengaluru, Yelahanka taluku, Bengaluru Urban, Karnataka, 560092, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Byrasandra",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 1,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 301,
+        "school": 202,
+        "park": 124,
+        "metro": 9
+      },
+      "centre": {
+        "lat": 12.9295931,
+        "lon": 77.581181
+      },
+      "details": {
+        "geocoded_as": "Byrasandra, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Chikkabegur",
+      "neighbourhood_score": 88.8,
+      "rera_score": 75.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 0,
+      "avg_complaints": null,
+      "amenity_counts": {
+        "hospital": 32,
+        "school": 84,
+        "park": 36,
+        "metro": 5
+      },
+      "centre": {
+        "lat": 12.8811794,
+        "lon": 77.6446126
+      },
+      "details": {
+        "geocoded_as": "Singasandra, Hosur Road, Singasandra, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560068, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Chikkana Halli",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 2,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 5,
+        "school": 59,
+        "park": 44,
+        "metro": 0
+      },
+      "centre": {
+        "lat": 12.8498013,
+        "lon": 77.600332
+      },
+      "details": {
+        "geocoded_as": "Saint Francis Xavier HPS Chikkana Halli, Chikkana Halli, Doddakammanahalli, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560083, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Chikkatoru",
+      "neighbourhood_score": 88.8,
+      "rera_score": 75.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 0,
+      "avg_complaints": null,
+      "amenity_counts": {
+        "hospital": 34,
+        "school": 61,
+        "park": 23,
+        "metro": 5
+      },
+      "centre": {
+        "lat": 12.8628345,
+        "lon": 77.6508047
+      },
+      "details": {
+        "geocoded_as": "Pragathi School, Chikkatoru, Chikkatoru, Chikkathoguru, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560500, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Chunchana Gatta",
+      "error": "Could not geocode locality: Chunchana Gatta"
+    },
+    {
+      "locality": "Chunchanagatta",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 1,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 67,
+        "school": 126,
+        "park": 109,
+        "metro": 5
+      },
+      "centre": {
+        "lat": 12.8898311,
+        "lon": 77.5728954
+      },
+      "details": {
+        "geocoded_as": "Carmel Jyothi LPS, Chunchanagatta, Chunchanagatta, Bheereshwara Nagar, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560078, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Cox Town",
+      "neighbourhood_score": 88.8,
+      "rera_score": 75.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 0,
+      "avg_complaints": null,
+      "amenity_counts": {
+        "hospital": 163,
+        "school": 144,
+        "park": 77,
+        "metro": 6
+      },
+      "centre": {
+        "lat": 12.9934858,
+        "lon": 77.6251081
+      },
+      "details": {
+        "geocoded_as": "Cox Town, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560005, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Dairy Colony",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 3,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 216,
+        "school": 246,
+        "park": 117,
+        "metro": 4
+      },
+      "centre": {
+        "lat": 12.9386863,
+        "lon": 77.6072286
+      },
+      "details": {
+        "geocoded_as": "GHPS Dairy Colony, Dairy Colony, Karnataka Milk Federation, S.G Palya, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560030, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Devarachikkana Halli",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 2,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 53,
+        "school": 120,
+        "park": 58,
+        "metro": 4
+      },
+      "centre": {
+        "lat": 12.8847643,
+        "lon": 77.6218621
+      },
+      "details": {
+        "geocoded_as": "Devarachikkana Halli Main Road, Beguru, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560076, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "DevarachikkanaHalli",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 2,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 89,
+        "school": 138,
+        "park": 87,
+        "metro": 5
+      },
+      "centre": {
+        "lat": 12.8931539,
+        "lon": 77.6219724
+      },
+      "details": {
+        "geocoded_as": "Devarachikkanahalli, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Doddakalasandra",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 1,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 31,
+        "school": 93,
+        "park": 1,
+        "metro": 0
+      },
+      "centre": {
+        "lat": 12.8821636,
+        "lon": 77.5612301
+      },
+      "details": {
+        "geocoded_as": "Doddakalasandra Lake, Thippasandra, Anjanapura, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Doddanagamangala",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 2,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 29,
+        "school": 56,
+        "park": 24,
+        "metro": 5
+      },
+      "centre": {
+        "lat": 12.8668341,
+        "lon": 77.6644155
+      },
+      "details": {
+        "geocoded_as": "Doddanagamangala Road, Chikkathoguru, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560100, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Doddanekundi",
+      "neighbourhood_score": 88.8,
+      "rera_score": 75.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 0,
+      "avg_complaints": null,
+      "amenity_counts": {
+        "hospital": 106,
+        "school": 86,
+        "park": 56,
+        "metro": 5
+      },
+      "centre": {
+        "lat": 12.9713194,
+        "lon": 77.6964768
+      },
+      "details": {
+        "geocoded_as": "Doddanekundi, Dodda Nekkundi, Bengaluru East City Corporation, Bengaluru, Bangalore East, Bengaluru Urban, Karnataka, 560037, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Doddathoguru",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 1,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 28,
+        "school": 45,
+        "park": 24,
+        "metro": 4
+      },
+      "centre": {
+        "lat": 12.8505644,
+        "lon": 77.6466948
+      },
+      "details": {
+        "geocoded_as": "Sai Srinivasa Encalave - A Block, Doddathoguru, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560100, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Doddathoru",
+      "error": "Could not geocode locality: Doddathoru"
+    },
+    {
+      "locality": "Domlur",
+      "neighbourhood_score": 88.8,
+      "rera_score": 75.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 0,
+      "avg_complaints": null,
+      "amenity_counts": {
+        "hospital": 175,
+        "school": 174,
+        "park": 104,
+        "metro": 4
+      },
+      "centre": {
+        "lat": 12.9624669,
+        "lon": 77.6381958
+      },
+      "details": {
+        "geocoded_as": "Domlur, Domluru, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560071, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Domlur I Stage",
+      "neighbourhood_score": 88.8,
+      "rera_score": 75.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 0,
+      "avg_complaints": null,
+      "amenity_counts": {
+        "hospital": 181,
+        "school": 183,
+        "park": 106,
+        "metro": 4
+      },
+      "centre": {
+        "lat": 12.9608811,
+        "lon": 77.6372331
+      },
+      "details": {
+        "geocoded_as": "Domlur Service Road, Domlur Village, Domlur, Domluru, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560071, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Dommalur",
+      "neighbourhood_score": 88.8,
+      "rera_score": 75.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 0,
+      "avg_complaints": null,
+      "amenity_counts": {
+        "hospital": 185,
+        "school": 183,
+        "park": 123,
+        "metro": 3
+      },
+      "centre": {
+        "lat": 12.9562148,
+        "lon": 77.6373162
+      },
+      "details": {
+        "geocoded_as": "Vidyanikethan Ehp Dommalur, Dommalur, Domluru, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560071, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Dommaluru",
+      "neighbourhood_score": 45.0,
+      "rera_score": 100.0,
+      "amenity_score": 0.0,
+      "rera_projects_matched": 1,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 0,
+        "school": 0,
+        "park": 0,
+        "metro": 0
+      },
+      "centre": {
+        "lat": 12.9680573,
+        "lon": 77.8718312
+      },
+      "details": {
+        "geocoded_as": "Dommaluru, Maluru taluk, Kolar, Karnataka, 563160, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Doopanahalli",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 1,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 171,
+        "school": 152,
+        "park": 104,
+        "metro": 5
+      },
+      "centre": {
+        "lat": 12.9674584,
+        "lon": 77.6396382
+      },
+      "details": {
+        "geocoded_as": "Doopanahalli, Domlur, Domluru, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560008, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Doresanipalya",
+      "neighbourhood_score": 88.8,
+      "rera_score": 75.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 0,
+      "avg_complaints": null,
+      "amenity_counts": {
+        "hospital": 82,
+        "school": 160,
+        "park": 102,
+        "metro": 1
+      },
+      "centre": {
+        "lat": 12.8877188,
+        "lon": 77.5944332
+      },
+      "details": {
+        "geocoded_as": "Doresanipalya, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Eegipura",
+      "neighbourhood_score": 88.8,
+      "rera_score": 75.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 0,
+      "avg_complaints": null,
+      "amenity_counts": {
+        "hospital": 164,
+        "school": 224,
+        "park": 116,
+        "metro": 3
+      },
+      "centre": {
+        "lat": 12.9568937,
+        "lon": 77.6178658
+      },
+      "details": {
+        "geocoded_as": "Holy Christ HPS Eegipura, Eegipura, Vannarpet, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560047, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Ejipura",
+      "neighbourhood_score": 88.8,
+      "rera_score": 75.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 0,
+      "avg_complaints": null,
+      "amenity_counts": {
+        "hospital": 120,
+        "school": 169,
+        "park": 104,
+        "metro": 0
+      },
+      "centre": {
+        "lat": 12.945245,
+        "lon": 77.6274776
+      },
+      "details": {
+        "geocoded_as": "Ejipura, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560095, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Electronic City",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 4,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 28,
+        "school": 43,
+        "park": 28,
+        "metro": 4
+      },
+      "centre": {
+        "lat": 12.8487599,
+        "lon": 77.648253
+      },
+      "details": {
+        "geocoded_as": "Prime City Apartments, Electronic City, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560100, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Ellikunate",
+      "error": "Could not geocode locality: Ellikunate"
+    },
+    {
+      "locality": "Ellikunte",
+      "error": "Could not geocode locality: Ellikunte"
+    },
+    {
+      "locality": "Fraser Town",
+      "neighbourhood_score": 88.8,
+      "rera_score": 75.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 0,
+      "avg_complaints": null,
+      "amenity_counts": {
+        "hospital": 101,
+        "school": 100,
+        "park": 59,
+        "metro": 0
+      },
+      "centre": {
+        "lat": 13.0027542,
+        "lon": 77.6157507
+      },
+      "details": {
+        "geocoded_as": "Clarence High School, Pottery Road, Sagayapura, Richards Town, Sagayapuram, Bengaluru North City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560005, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Garvebhavi Palya",
+      "neighbourhood_score": 88.8,
+      "rera_score": 75.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 0,
+      "avg_complaints": null,
+      "amenity_counts": {
+        "hospital": 103,
+        "school": 155,
+        "park": 94,
+        "metro": 5
+      },
+      "centre": {
+        "lat": 12.9016952,
+        "lon": 77.6319861
+      },
+      "details": {
+        "geocoded_as": "Hongasandra, Service Road, Hongasandra, Garvebavi Palya, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560068, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Geddalahalli",
+      "neighbourhood_score": 88.8,
+      "rera_score": 75.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 0,
+      "avg_complaints": null,
+      "amenity_counts": {
+        "hospital": 43,
+        "school": 111,
+        "park": 104,
+        "metro": 2
+      },
+      "centre": {
+        "lat": 13.0367681,
+        "lon": 77.5675668
+      },
+      "details": {
+        "geocoded_as": "Geddalahalli, Bengaluru North City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Gottigere",
+      "neighbourhood_score": 88.8,
+      "rera_score": 75.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 0,
+      "avg_complaints": null,
+      "amenity_counts": {
+        "hospital": 6,
+        "school": 76,
+        "park": 53,
+        "metro": 0
+      },
+      "centre": {
+        "lat": 12.8565317,
+        "lon": 77.5877237
+      },
+      "details": {
+        "geocoded_as": "Gottigere, Yelenahalli, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560083, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Govindashetty Palya",
+      "neighbourhood_score": 88.8,
+      "rera_score": 75.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 0,
+      "avg_complaints": null,
+      "amenity_counts": {
+        "hospital": 28,
+        "school": 45,
+        "park": 32,
+        "metro": 6
+      },
+      "centre": {
+        "lat": 12.8539353,
+        "lon": 77.6717128
+      },
+      "details": {
+        "geocoded_as": "GHPS Govindashetty Palya, \u0c97\u0ccb\u0cb5\u0cbf\u0c82\u0ca6\u0cb6\u0cc6\u0c9f\u0ccd\u0c9f\u0cbf \u0caa\u0cbe\u0cb3\u0ccd\u0caf, Bangalore South, Bengaluru Urban, Karnataka, 560100, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Gurappana Palya",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 1,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 238,
+        "school": 210,
+        "park": 139,
+        "metro": 7
+      },
+      "centre": {
+        "lat": 12.9207575,
+        "lon": 77.6033328
+      },
+      "details": {
+        "geocoded_as": "Gurappana Palya, Jayanagar East, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560029, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Gurappanapalya",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 1,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 258,
+        "school": 226,
+        "park": 129,
+        "metro": 7
+      },
+      "centre": {
+        "lat": 12.9238132,
+        "lon": 77.6004538
+      },
+      "details": {
+        "geocoded_as": "Gurappanapalya, Bannerghatta Road, Abdul Kalam Nagar, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560029, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "G\u0101ndhinagara",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 4,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 191,
+        "school": 174,
+        "park": 98,
+        "metro": 11
+      },
+      "centre": {
+        "lat": 12.9771534,
+        "lon": 77.5800313
+      },
+      "details": {
+        "geocoded_as": "Gandhinagar, Nehru Nagar, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560009, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "HAL 2nd Stage",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 8,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 164,
+        "school": 129,
+        "park": 97,
+        "metro": 5
+      },
+      "centre": {
+        "lat": 12.9689409,
+        "lon": 77.6437106
+      },
+      "details": {
+        "geocoded_as": "HAL 2nd Stage, Kodihalli, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560008, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Halasuru",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 1,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 200,
+        "school": 216,
+        "park": 109,
+        "metro": 6
+      },
+      "centre": {
+        "lat": 12.9778793,
+        "lon": 77.6246697
+      },
+      "details": {
+        "geocoded_as": "Halasuru, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Hari Nagar",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 18,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 26,
+        "school": 111,
+        "park": 87,
+        "metro": 4
+      },
+      "centre": {
+        "lat": 12.8772854,
+        "lon": 77.5701703
+      },
+      "details": {
+        "geocoded_as": "GKHPS Hari Nagar, Hari Nagar, Harinagar, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560062, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Hebbagodi",
+      "neighbourhood_score": 88.8,
+      "rera_score": 75.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 0,
+      "avg_complaints": null,
+      "amenity_counts": {
+        "hospital": 24,
+        "school": 33,
+        "park": 32,
+        "metro": 4
+      },
+      "centre": {
+        "lat": 12.8295017,
+        "lon": 77.6767979
+      },
+      "details": {
+        "geocoded_as": "Hebbagodi, Anekal, Bengaluru Urban, Karnataka, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Hebbal",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 3,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 100,
+        "school": 84,
+        "park": 97,
+        "metro": 0
+      },
+      "centre": {
+        "lat": 13.0382184,
+        "lon": 77.5919
+      },
+      "details": {
+        "geocoded_as": "Hebbal, Bengaluru North City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Hebbal Kempapura",
+      "neighbourhood_score": 88.8,
+      "rera_score": 75.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 0,
+      "avg_complaints": null,
+      "amenity_counts": {
+        "hospital": 92,
+        "school": 70,
+        "park": 80,
+        "metro": 0
+      },
+      "centre": {
+        "lat": 13.050194,
+        "lon": 77.6075951
+      },
+      "details": {
+        "geocoded_as": "Hebbal Kempapura, 11th Cross Road, Coffee Board Layout, Kempapura, Bengaluru North City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560024, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Hennur",
+      "neighbourhood_score": 88.8,
+      "rera_score": 75.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 0,
+      "avg_complaints": null,
+      "amenity_counts": {
+        "hospital": 100,
+        "school": 91,
+        "park": 48,
+        "metro": 0
+      },
+      "centre": {
+        "lat": 13.037077,
+        "lon": 77.6413572
+      },
+      "details": {
+        "geocoded_as": "Hennur, HBR Layout, Bengaluru North City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560043, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Hesaraghatta Hobli",
+      "error": "Could not geocode locality: Hesaraghatta Hobli"
+    },
+    {
+      "locality": "High Grounds",
+      "neighbourhood_score": 88.8,
+      "rera_score": 75.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 0,
+      "avg_complaints": null,
+      "amenity_counts": {
+        "hospital": 177,
+        "school": 163,
+        "park": 108,
+        "metro": 10
+      },
+      "centre": {
+        "lat": 12.9865133,
+        "lon": 77.5830766
+      },
+      "details": {
+        "geocoded_as": "High Grounds, Sampangirama Nagar, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560001, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Hongasandra",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 1,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 108,
+        "school": 152,
+        "park": 98,
+        "metro": 6
+      },
+      "centre": {
+        "lat": 12.8986261,
+        "lon": 77.6286732
+      },
+      "details": {
+        "geocoded_as": "Hongasandra, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "HSR Layout",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 37,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 108,
+        "school": 131,
+        "park": 100,
+        "metro": 4
+      },
+      "centre": {
+        "lat": 12.9116225,
+        "lon": 77.6388622
+      },
+      "details": {
+        "geocoded_as": "HSR Layout, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560102, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Indiranagar",
+      "neighbourhood_score": 97.8,
+      "rera_score": 95.2,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 5,
+      "avg_complaints": 0.4,
+      "amenity_counts": {
+        "hospital": 167,
+        "school": 133,
+        "park": 95,
+        "metro": 5
+      },
+      "centre": {
+        "lat": 12.9732913,
+        "lon": 77.6404672
+      },
+      "details": {
+        "geocoded_as": "Indiranagar, Jogpalya, Bengaluru Central City Corporation, Bengaluru, Bangalore East, Bengaluru Urban, Karnataka, 560008, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Indiranagar 2nd Stage",
+      "neighbourhood_score": 97.8,
+      "rera_score": 95.2,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 5,
+      "avg_complaints": 0.4,
+      "amenity_counts": {
+        "hospital": 160,
+        "school": 135,
+        "park": 95,
+        "metro": 5
+      },
+      "centre": {
+        "lat": 12.9770856,
+        "lon": 77.63869
+      },
+      "details": {
+        "geocoded_as": "Indiranagar 2nd Stage, Hoysala Nagara Central, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Jakkur",
+      "neighbourhood_score": 88.8,
+      "rera_score": 75.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 0,
+      "avg_complaints": null,
+      "amenity_counts": {
+        "hospital": 86,
+        "school": 61,
+        "park": 65,
+        "metro": 0
+      },
+      "centre": {
+        "lat": 13.0784743,
+        "lon": 77.6068938
+      },
+      "details": {
+        "geocoded_as": "Jakkur, Bengaluru North City Corporation, Bengaluru, Yelahanka taluku, Bengaluru Urban, Karnataka, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Jambusavari Dinne",
+      "neighbourhood_score": 88.8,
+      "rera_score": 75.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 0,
+      "avg_complaints": null,
+      "amenity_counts": {
+        "hospital": 19,
+        "school": 108,
+        "park": 59,
+        "metro": 0
+      },
+      "centre": {
+        "lat": 12.8655505,
+        "lon": 77.5809941
+      },
+      "details": {
+        "geocoded_as": "Jambu Savari Dinne, Gottigere Main Road, Kothnur, Kothanur, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560076, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Jaraganahalli",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 4,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 127,
+        "school": 148,
+        "park": 125,
+        "metro": 6
+      },
+      "centre": {
+        "lat": 12.8987896,
+        "lon": 77.5776273
+      },
+      "details": {
+        "geocoded_as": "Jaraganahalli, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560078, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Jayanagar",
+      "neighbourhood_score": 95.4,
+      "rera_score": 89.8,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 13,
+      "avg_complaints": 0.85,
+      "amenity_counts": {
+        "hospital": 300,
+        "school": 206,
+        "park": 125,
+        "metro": 9
+      },
+      "centre": {
+        "lat": 12.9292731,
+        "lon": 77.5824229
+      },
+      "details": {
+        "geocoded_as": "Jayanagar, Tilak Nagara, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560011, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Jayanagar 3rd Block",
+      "neighbourhood_score": 99.2,
+      "rera_score": 98.3,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 7,
+      "avg_complaints": 0.14,
+      "amenity_counts": {
+        "hospital": 294,
+        "school": 206,
+        "park": 9,
+        "metro": 0
+      },
+      "centre": {
+        "lat": 12.933863,
+        "lon": 77.5830336
+      },
+      "details": {
+        "geocoded_as": "Jayanagar 3rd Block, Yediyuru, Bengaluru West City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Jayanagar 4th Block",
+      "neighbourhood_score": 99.2,
+      "rera_score": 98.3,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 7,
+      "avg_complaints": 0.14,
+      "amenity_counts": {
+        "hospital": 290,
+        "school": 205,
+        "park": 137,
+        "metro": 10
+      },
+      "centre": {
+        "lat": 12.9265737,
+        "lon": 77.5835041
+      },
+      "details": {
+        "geocoded_as": "Jayanagar 4th Block, Tilak Nagara, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560011, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Jayanagar 9th Block",
+      "neighbourhood_score": 99.2,
+      "rera_score": 98.3,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 7,
+      "avg_complaints": 0.14,
+      "amenity_counts": {
+        "hospital": 238,
+        "school": 209,
+        "park": 125,
+        "metro": 8
+      },
+      "centre": {
+        "lat": 12.9189992,
+        "lon": 77.5921272
+      },
+      "details": {
+        "geocoded_as": "Jayanagar 9th Block, Pattabhirama Nagara, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Jogupalya",
+      "neighbourhood_score": 88.8,
+      "rera_score": 75.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 0,
+      "avg_complaints": null,
+      "amenity_counts": {
+        "hospital": 185,
+        "school": 202,
+        "park": 102,
+        "metro": 5
+      },
+      "centre": {
+        "lat": 12.9746882,
+        "lon": 77.628026
+      },
+      "details": {
+        "geocoded_as": "Jogupalya, Indiranagar, Jogpalya, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560008, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "JP Nagar",
+      "neighbourhood_score": 99.0,
+      "rera_score": 97.8,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 11,
+      "avg_complaints": 0.18,
+      "amenity_counts": {
+        "hospital": 207,
+        "school": 192,
+        "park": 142,
+        "metro": 8
+      },
+      "centre": {
+        "lat": 12.9096941,
+        "lon": 77.5866067
+      },
+      "details": {
+        "geocoded_as": "JP Nagar, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "JP Nagar 5th Phase",
+      "error": "Could not geocode locality: JP Nagar 5th Phase"
+    },
+    {
+      "locality": "Kadubeesanahalli",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 1,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 53,
+        "school": 51,
+        "park": 52,
+        "metro": 0
+      },
+      "centre": {
+        "lat": 12.9366109,
+        "lon": 77.7047316
+      },
+      "details": {
+        "geocoded_as": "Panathur Main Road, Kaverappa Layout, Kaadubeesanahalli, Panathur, Bengaluru East City Corporation, Bengaluru, Bangalore East, Bengaluru Urban, Karnataka, 560103, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Kaggalipura",
+      "neighbourhood_score": 88.8,
+      "rera_score": 75.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 0,
+      "avg_complaints": null,
+      "amenity_counts": {
+        "hospital": 0,
+        "school": 20,
+        "park": 4,
+        "metro": 0
+      },
+      "centre": {
+        "lat": 12.855621,
+        "lon": 77.7246606
+      },
+      "details": {
+        "geocoded_as": "Kaggalipura, Kommasandra, Anekal, Bengaluru Urban, Karnataka, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Kalyan Nagar",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 2,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 134,
+        "school": 105,
+        "park": 49,
+        "metro": 0
+      },
+      "centre": {
+        "lat": 13.0221416,
+        "lon": 77.6403368
+      },
+      "details": {
+        "geocoded_as": "Kalyan Nagar, Kalyanagar, Bengaluru North City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560043, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Kembathhalli",
+      "neighbourhood_score": 88.8,
+      "rera_score": 75.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 0,
+      "avg_complaints": null,
+      "amenity_counts": {
+        "hospital": 6,
+        "school": 74,
+        "park": 38,
+        "metro": 0
+      },
+      "centre": {
+        "lat": 12.8572549,
+        "lon": 77.576942
+      },
+      "details": {
+        "geocoded_as": "GHPS Kembathhalli, Kembathhalli, Anjanapura, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560108, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Kengeri",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 1,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 14,
+        "school": 36,
+        "park": 42,
+        "metro": 3
+      },
+      "centre": {
+        "lat": 12.9176571,
+        "lon": 77.4837568
+      },
+      "details": {
+        "geocoded_as": "Kengeri, Kengeri Main Road, Kengeri Satelite Town, Kengeri, Bengaluru West City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560060, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Kodichikkana Halli",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 1,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 124,
+        "school": 161,
+        "park": 111,
+        "metro": 6
+      },
+      "centre": {
+        "lat": 12.9006028,
+        "lon": 77.6201862
+      },
+      "details": {
+        "geocoded_as": "GHPS Kodichikkana Halli, Kodichikkana Halli, Bommanahalli, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560076, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Konanakunte",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 1,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 26,
+        "school": 114,
+        "park": 88,
+        "metro": 4
+      },
+      "centre": {
+        "lat": 12.8792861,
+        "lon": 77.5697529
+      },
+      "details": {
+        "geocoded_as": "Konanakunte, Harinagar, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560062, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Konappana Agrahara",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 1,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 31,
+        "school": 45,
+        "park": 32,
+        "metro": 5
+      },
+      "centre": {
+        "lat": 12.8528618,
+        "lon": 77.668169
+      },
+      "details": {
+        "geocoded_as": "Konappana Agrahara, Electronics City Phase 1, Electronic City, Bangalore South, Bengaluru Urban, Karnataka, 560100, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Koramangala",
+      "neighbourhood_score": 55.0,
+      "rera_score": 0.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 2,
+      "avg_complaints": 16.5,
+      "amenity_counts": {
+        "hospital": 127,
+        "school": 180,
+        "park": 111,
+        "metro": 3
+      },
+      "centre": {
+        "lat": 12.9357366,
+        "lon": 77.624081
+      },
+      "details": {
+        "geocoded_as": "Koramangala, Sri Lakshmi Devi Ward, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560095, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Kothanur",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 1,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 21,
+        "school": 114,
+        "park": 71,
+        "metro": 1
+      },
+      "centre": {
+        "lat": 12.8701259,
+        "lon": 77.5820178
+      },
+      "details": {
+        "geocoded_as": "Kothanur, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Lakkasandra",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 2,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 255,
+        "school": 259,
+        "park": 12,
+        "metro": 0
+      },
+      "centre": {
+        "lat": 12.9381829,
+        "lon": 77.6002563
+      },
+      "details": {
+        "geocoded_as": "Lakkasandra, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Lakksandra",
+      "error": "Could not geocode locality: Lakksandra"
+    },
+    {
+      "locality": "Lalbhag Siddapur",
+      "neighbourhood_score": 88.8,
+      "rera_score": 75.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 0,
+      "avg_complaints": null,
+      "amenity_counts": {
+        "hospital": 262,
+        "school": 226,
+        "park": 102,
+        "metro": 7
+      },
+      "centre": {
+        "lat": 12.9458038,
+        "lon": 77.5884207
+      },
+      "details": {
+        "geocoded_as": "GHPS Lalbhag Siddapur, Lalbhag Siddapur, Venkat Reddy Nagara, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560069, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Madival",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 1,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 166,
+        "school": 212,
+        "park": 130,
+        "metro": 5
+      },
+      "centre": {
+        "lat": 12.9244734,
+        "lon": 77.6185744
+      },
+      "details": {
+        "geocoded_as": "Sri Sathyanarayana HPS Madival, Madival, Koramangala 2nd Block, Kormangala West, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560034, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Madivala",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 1,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 154,
+        "school": 199,
+        "park": 132,
+        "metro": 5
+      },
+      "centre": {
+        "lat": 12.9214542,
+        "lon": 77.6211213
+      },
+      "details": {
+        "geocoded_as": "Madivala, Madiwala Sarjapura Road, Sidhartha Colony, Kormangala West, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560034, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Madiwala",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 1,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 162,
+        "school": 206,
+        "park": 130,
+        "metro": 5
+      },
+      "centre": {
+        "lat": 12.9218931,
+        "lon": 77.6177348
+      },
+      "details": {
+        "geocoded_as": "Madiwala, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Mahadevapura",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 1,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 120,
+        "school": 70,
+        "park": 34,
+        "metro": 6
+      },
+      "centre": {
+        "lat": 12.9965445,
+        "lon": 77.6927176
+      },
+      "details": {
+        "geocoded_as": "Singayyanapalya, Whitefield Road, Devasandra, Bengaluru East City Corporation, Bengaluru, Bangalore East, Bengaluru Urban, Karnataka, 560048, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Mahadevpura",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 1,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 119,
+        "school": 70,
+        "park": 34,
+        "metro": 6
+      },
+      "centre": {
+        "lat": 12.9968412,
+        "lon": 77.6928386
+      },
+      "details": {
+        "geocoded_as": "Mahadevpura Police Station, Whitefield Road, Devasandra, Bengaluru East City Corporation, Bengaluru, Bangalore East, Bengaluru Urban, Karnataka, 560048, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Mahalakshmipuram",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 2,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 149,
+        "school": 146,
+        "park": 125,
+        "metro": 7
+      },
+      "centre": {
+        "lat": 13.0095381,
+        "lon": 77.5424596
+      },
+      "details": {
+        "geocoded_as": "Mahalakshmipuram, Bengaluru West City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Mahalaxmipuram",
+      "error": "Could not geocode locality: Mahalaxmipuram"
+    },
+    {
+      "locality": "Malleshwaram",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 1,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 189,
+        "school": 192,
+        "park": 127,
+        "metro": 6
+      },
+      "centre": {
+        "lat": 13.0027353,
+        "lon": 77.5703253
+      },
+      "details": {
+        "geocoded_as": "Malleswaram, Malleshwaram, Bengaluru West City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560003, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Malleswaram",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 1,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 189,
+        "school": 192,
+        "park": 127,
+        "metro": 6
+      },
+      "centre": {
+        "lat": 13.0027353,
+        "lon": 77.5703253
+      },
+      "details": {
+        "geocoded_as": "Malleswaram, Malleshwaram, Bengaluru West City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560003, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Mangammana Palya",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 1,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 89,
+        "school": 125,
+        "park": 92,
+        "metro": 5
+      },
+      "centre": {
+        "lat": 12.9012491,
+        "lon": 77.6385066
+      },
+      "details": {
+        "geocoded_as": "Mangammana Palya, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Manyata Tech Park",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 1,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 65,
+        "school": 91,
+        "park": 52,
+        "metro": 0
+      },
+      "centre": {
+        "lat": 13.0482891,
+        "lon": 77.6211004
+      },
+      "details": {
+        "geocoded_as": "Manyata Tech Park, Kempapura, Bengaluru North City Corporation, Bengaluru, Bangalore East, Bengaluru Urban, Karnataka, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Marathahalli",
+      "neighbourhood_score": 88.8,
+      "rera_score": 75.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 0,
+      "avg_complaints": null,
+      "amenity_counts": {
+        "hospital": 75,
+        "school": 77,
+        "park": 66,
+        "metro": 0
+      },
+      "centre": {
+        "lat": 12.9552572,
+        "lon": 77.6984163
+      },
+      "details": {
+        "geocoded_as": "Marathahalli, Bengaluru East City Corporation, Bengaluru, Bangalore East, Bengaluru Urban, Karnataka, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Mestri Palya",
+      "neighbourhood_score": 88.8,
+      "rera_score": 75.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 0,
+      "avg_complaints": null,
+      "amenity_counts": {
+        "hospital": 130,
+        "school": 182,
+        "park": 117,
+        "metro": 3
+      },
+      "centre": {
+        "lat": 12.9331051,
+        "lon": 77.62526
+      },
+      "details": {
+        "geocoded_as": "GLPS Mestri Palya, Mestri Palya, Kormangala East, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560034, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Naganathapura",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 1,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 30,
+        "school": 52,
+        "park": 37,
+        "metro": 4
+      },
+      "centre": {
+        "lat": 12.8755868,
+        "lon": 77.6673054
+      },
+      "details": {
+        "geocoded_as": "Naganathapura, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Nagarvaraplaya",
+      "error": "Could not geocode locality: Nagarvaraplaya"
+    },
+    {
+      "locality": "Nagavara",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 6,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 80,
+        "school": 97,
+        "park": 51,
+        "metro": 0
+      },
+      "centre": {
+        "lat": 13.0374647,
+        "lon": 77.623602
+      },
+      "details": {
+        "geocoded_as": "Nagavara, Hennur, Bengaluru North City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560045, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Nagawara",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 6,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 39,
+        "school": 92,
+        "park": 52,
+        "metro": 0
+      },
+      "centre": {
+        "lat": 13.0522475,
+        "lon": 77.6311729
+      },
+      "details": {
+        "geocoded_as": "Ashwathanagara, Thanisandra Main Road, Thanisandra, Bengaluru North City Corporation, Bengaluru, Bangalore East, Bengaluru Urban, Karnataka, 560045, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Neelasandra",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 1,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 154,
+        "school": 225,
+        "park": 109,
+        "metro": 3
+      },
+      "centre": {
+        "lat": 12.9523859,
+        "lon": 77.6152058
+      },
+      "details": {
+        "geocoded_as": "Neelasandra, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Nekarara Colony",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 3,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 4,
+        "school": 49,
+        "park": 21,
+        "metro": 0
+      },
+      "centre": {
+        "lat": 12.8435532,
+        "lon": 77.5850056
+      },
+      "details": {
+        "geocoded_as": "GMPS Nekarara Colony, Nekarara Colony, Doddakammanahalli, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560083, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "NS palya",
+      "neighbourhood_score": 88.8,
+      "rera_score": 75.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 0,
+      "avg_complaints": null,
+      "amenity_counts": {
+        "hospital": 169,
+        "school": 191,
+        "park": 122,
+        "metro": 6
+      },
+      "centre": {
+        "lat": 12.9071902,
+        "lon": 77.6067335
+      },
+      "details": {
+        "geocoded_as": "Hillside Public LPS Ns Palya, B T M Layout W No 65, BTM Layout, Viswamanava Kuvempu Ward, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560076, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "old gurappana Palya",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 1,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 234,
+        "school": 213,
+        "park": 140,
+        "metro": 7
+      },
+      "centre": {
+        "lat": 12.9224842,
+        "lon": 77.6058977
+      },
+      "details": {
+        "geocoded_as": "GUMHPS Old Gurappana Palya, old gurappana Palya, Abdul Kalam Nagar, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560029, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Palace Grounds",
+      "neighbourhood_score": 88.8,
+      "rera_score": 75.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 0,
+      "avg_complaints": null,
+      "amenity_counts": {
+        "hospital": 152,
+        "school": 161,
+        "park": 91,
+        "metro": 4
+      },
+      "centre": {
+        "lat": 13.0022192,
+        "lon": 77.5860848
+      },
+      "details": {
+        "geocoded_as": "Palace Grounds Lake, Guttahalli, Rajamahal, Bengaluru West City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Parangipalya",
+      "neighbourhood_score": 88.8,
+      "rera_score": 75.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 0,
+      "avg_complaints": null,
+      "amenity_counts": {
+        "hospital": 101,
+        "school": 101,
+        "park": 92,
+        "metro": 3
+      },
+      "centre": {
+        "lat": 12.9074791,
+        "lon": 77.6510668
+      },
+      "details": {
+        "geocoded_as": "Parangipalya, Sector 2, HSR Layout, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560102, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Parappana Agrahara",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 1,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 27,
+        "school": 56,
+        "park": 43,
+        "metro": 4
+      },
+      "centre": {
+        "lat": 12.8802088,
+        "lon": 77.6658442
+      },
+      "details": {
+        "geocoded_as": "Bangalore Central Jail, Jail Road, Naganathapura, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560068, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Phoenix Mall of Asia",
+      "neighbourhood_score": 88.8,
+      "rera_score": 75.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 0,
+      "avg_complaints": null,
+      "amenity_counts": {
+        "hospital": 78,
+        "school": 69,
+        "park": 84,
+        "metro": 0
+      },
+      "centre": {
+        "lat": 13.0709526,
+        "lon": 77.5902597
+      },
+      "details": {
+        "geocoded_as": "Phoenix Mall of Asia, GKVK Road, Byatarayanapura, Bengaluru North City Corporation, Bengaluru, Yelahanka taluku, Bengaluru Urban, Karnataka, 560092, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Pillagana Halli",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 1,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 3,
+        "school": 56,
+        "park": 32,
+        "metro": 0
+      },
+      "centre": {
+        "lat": 12.8493518,
+        "lon": 77.5819746
+      },
+      "details": {
+        "geocoded_as": "GLPS Pillagana Halli, Pillagana Halli, Gottigere, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560083, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Poornaprajna Nagara",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 3,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 65,
+        "school": 52,
+        "park": 90,
+        "metro": 0
+      },
+      "centre": {
+        "lat": 12.908153,
+        "lon": 77.5346211
+      },
+      "details": {
+        "geocoded_as": "Poornaprajna Nagara Water Tank, Dr. Vishnuvardhan Road, BHCS Layout, Subramanyapura, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560061, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Puttayyana Palya",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 1,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 246,
+        "school": 213,
+        "park": 124,
+        "metro": 9
+      },
+      "centre": {
+        "lat": 12.9197208,
+        "lon": 77.5940053
+      },
+      "details": {
+        "geocoded_as": "GHPS Puttayyana Palya, Puttayyana Palya, Jayanagar 9th Block, Pattabhirama Nagara, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560041, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Puttenhalli",
+      "neighbourhood_score": 88.8,
+      "rera_score": 75.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 0,
+      "avg_complaints": null,
+      "amenity_counts": {
+        "hospital": 95,
+        "school": 164,
+        "park": 108,
+        "metro": 4
+      },
+      "centre": {
+        "lat": 12.8903838,
+        "lon": 77.5876352
+      },
+      "details": {
+        "geocoded_as": "Puttenhalli Lake, Puttenahalli, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Rajajinagar",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 3,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 218,
+        "school": 170,
+        "park": 151,
+        "metro": 9
+      },
+      "centre": {
+        "lat": 13.0005359,
+        "lon": 77.5496996
+      },
+      "details": {
+        "geocoded_as": "Rajajinagar, Chord Road, Ketamaranahalli, Basaveshwaranagar, Kethamaranahalli, Bengaluru West City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560010, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Rajarajeshwari Nagar",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 9,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 24,
+        "school": 54,
+        "park": 68,
+        "metro": 5
+      },
+      "centre": {
+        "lat": 12.9274413,
+        "lon": 77.5155224
+      },
+      "details": {
+        "geocoded_as": "Rajarajeshwari Nagar, Rajarajeshwari Nagara, Bengaluru West City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560098, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Rajendranagar",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 4,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 147,
+        "school": 220,
+        "park": 101,
+        "metro": 1
+      },
+      "centre": {
+        "lat": 12.9466371,
+        "lon": 77.6174963
+      },
+      "details": {
+        "geocoded_as": "Rajendranagar, National Games Village, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560047, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Richmond Town",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 1,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 154,
+        "school": 227,
+        "park": 94,
+        "metro": 7
+      },
+      "centre": {
+        "lat": 12.963555,
+        "lon": 77.6015856
+      },
+      "details": {
+        "geocoded_as": "Richmond Town, Shanthinagar, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560025, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "RMV 2nd Stage",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 1,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 47,
+        "school": 116,
+        "park": 104,
+        "metro": 2
+      },
+      "centre": {
+        "lat": 13.0360109,
+        "lon": 77.5695288
+      },
+      "details": {
+        "geocoded_as": "RMV 2nd Stage, Nagashettyhalli, Bengaluru North City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560094, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "S G Palya",
+      "neighbourhood_score": 88.8,
+      "rera_score": 75.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 0,
+      "avg_complaints": null,
+      "amenity_counts": {
+        "hospital": 224,
+        "school": 244,
+        "park": 134,
+        "metro": 7
+      },
+      "centre": {
+        "lat": 12.9324773,
+        "lon": 77.6046399
+      },
+      "details": {
+        "geocoded_as": "S.G Palya, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560029, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Sadashivanagar",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 8,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 142,
+        "school": 161,
+        "park": 127,
+        "metro": 4
+      },
+      "centre": {
+        "lat": 13.0110193,
+        "lon": 77.5808641
+      },
+      "details": {
+        "geocoded_as": "Sadashivanagar, Sadashiva Nagara, Bengaluru West City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560080, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Sadashivanagara",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 11,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 161,
+        "school": 169,
+        "park": 137,
+        "metro": 7
+      },
+      "centre": {
+        "lat": 13.0149314,
+        "lon": 77.5728595
+      },
+      "details": {
+        "geocoded_as": "Sadashivanagara Police Station, New BEL Road, Sadashivanagar, Sadashiva Nagara, Bengaluru West City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560012, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Sahakar Nagar",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 6,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 85,
+        "school": 66,
+        "park": 90,
+        "metro": 0
+      },
+      "centre": {
+        "lat": 13.069641,
+        "lon": 77.5857251
+      },
+      "details": {
+        "geocoded_as": "Sahakar Nagar Railway Underpass, Rajiv Gandhi Nagar, Thindlu, Bengaluru North City Corporation, Bengaluru, Yelahanka taluku, Bengaluru Urban, Karnataka, 560097, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Sampangi Rama Nagar",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 1,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 177,
+        "school": 227,
+        "park": 104,
+        "metro": 10
+      },
+      "centre": {
+        "lat": 12.9666076,
+        "lon": 77.5925094
+      },
+      "details": {
+        "geocoded_as": "Sampangi Rama Nagar Vegetables Market, 6th Cross Road, D'Souza Layout, Shanthala Nagar, Ashokanagar, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560027, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Sampangiram Nagar",
+      "error": "Could not geocode locality: Sampangiram Nagar"
+    },
+    {
+      "locality": "Sanjay Nagar",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 1,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 83,
+        "school": 82,
+        "park": 63,
+        "metro": 1
+      },
+      "centre": {
+        "lat": 12.9578658,
+        "lon": 77.6958748
+      },
+      "details": {
+        "geocoded_as": "Sanjay Nagar, Ashwath Nagar, Bengaluru East City Corporation, Bengaluru, Bangalore East, Bengaluru Urban, Karnataka, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Seshadripuram",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 1,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 188,
+        "school": 200,
+        "park": 119,
+        "metro": 10
+      },
+      "centre": {
+        "lat": 12.9946631,
+        "lon": 77.5747183
+      },
+      "details": {
+        "geocoded_as": "Seshadripuram, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Shanthala Nagar",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 5,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 137,
+        "school": 219,
+        "park": 107,
+        "metro": 8
+      },
+      "centre": {
+        "lat": 12.9714173,
+        "lon": 77.5994394
+      },
+      "details": {
+        "geocoded_as": "Shanthala Nagar, Ashokanagar, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560001, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Shanthinagar",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 9,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 175,
+        "school": 234,
+        "park": 107,
+        "metro": 9
+      },
+      "centre": {
+        "lat": 12.9578068,
+        "lon": 77.5994152
+      },
+      "details": {
+        "geocoded_as": "Shanthinagar, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Shantinagar",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 5,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 171,
+        "school": 216,
+        "park": 14,
+        "metro": 0
+      },
+      "centre": {
+        "lat": 12.9544078,
+        "lon": 77.6026594
+      },
+      "details": {
+        "geocoded_as": "Shantinagar Cemetery, Shanthinagar, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Shivajinagar",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 8,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 130,
+        "school": 186,
+        "park": 96,
+        "metro": 6
+      },
+      "centre": {
+        "lat": 12.9855286,
+        "lon": 77.6054496
+      },
+      "details": {
+        "geocoded_as": "Shivajinagar, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560051, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Shivakote",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 1,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 1,
+        "school": 12,
+        "park": 2,
+        "metro": 0
+      },
+      "centre": {
+        "lat": 13.1342593,
+        "lon": 77.5152474
+      },
+      "details": {
+        "geocoded_as": "Shivakote, Yelahanka taluku, Bengaluru Urban, Karnataka, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Singasandra",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 3,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 29,
+        "school": 79,
+        "park": 32,
+        "metro": 5
+      },
+      "centre": {
+        "lat": 12.8787382,
+        "lon": 77.642089
+      },
+      "details": {
+        "geocoded_as": "Singasandra, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "St Thomas Town",
+      "neighbourhood_score": 88.8,
+      "rera_score": 75.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 0,
+      "avg_complaints": null,
+      "amenity_counts": {
+        "hospital": 125,
+        "school": 101,
+        "park": 56,
+        "metro": 0
+      },
+      "centre": {
+        "lat": 13.0065573,
+        "lon": 77.6224071
+      },
+      "details": {
+        "geocoded_as": "St. Thomas Town, Cooke Town, Maruthi Seva Nagara, Bengaluru North City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560084, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Subhash Nagar",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 1,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 194,
+        "school": 187,
+        "park": 121,
+        "metro": 11
+      },
+      "centre": {
+        "lat": 12.9899856,
+        "lon": 77.5719656
+      },
+      "details": {
+        "geocoded_as": "Subhash Nagar Junction, Railway Platform Road, Dattatreya Ward, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560021, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Suddagunte Palya",
+      "neighbourhood_score": 88.8,
+      "rera_score": 75.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 0,
+      "avg_complaints": null,
+      "amenity_counts": {
+        "hospital": 162,
+        "school": 224,
+        "park": 99,
+        "metro": 1
+      },
+      "centre": {
+        "lat": 12.9475906,
+        "lon": 77.6117497
+      },
+      "details": {
+        "geocoded_as": "Padmavathi HS Suddagunte Palya, Suddagunte Palya, A Adugodi, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560030, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "The Bay, Ecoworld",
+      "error": "Could not geocode locality: The Bay, Ecoworld"
+    },
+    {
+      "locality": "Thippasandra",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 1,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 183,
+        "school": 133,
+        "park": 101,
+        "metro": 4
+      },
+      "centre": {
+        "lat": 12.973936,
+        "lon": 77.6509982
+      },
+      "details": {
+        "geocoded_as": "Thippasandra, Indiranagar, Bengaluru Central City Corporation, Bengaluru, Bangalore East, Bengaluru Urban, Karnataka, 560075, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Tilak Nagar",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 1,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 273,
+        "school": 225,
+        "park": 139,
+        "metro": 8
+      },
+      "centre": {
+        "lat": 12.9275876,
+        "lon": 77.5947124
+      },
+      "details": {
+        "geocoded_as": "Tilak Nagar, Jayanagar East, Tilak Nagara, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560041, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Ulsoor",
+      "neighbourhood_score": 88.8,
+      "rera_score": 75.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 0,
+      "avg_complaints": null,
+      "amenity_counts": {
+        "hospital": 200,
+        "school": 216,
+        "park": 109,
+        "metro": 6
+      },
+      "centre": {
+        "lat": 12.9778793,
+        "lon": 77.6246697
+      },
+      "details": {
+        "geocoded_as": "Halasuru, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "V V Puram",
+      "neighbourhood_score": 88.8,
+      "rera_score": 75.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 0,
+      "avg_complaints": null,
+      "amenity_counts": {
+        "hospital": 281,
+        "school": 181,
+        "park": 87,
+        "metro": 8
+      },
+      "centre": {
+        "lat": 12.9500602,
+        "lon": 77.5768521
+      },
+      "details": {
+        "geocoded_as": "V.V Puram, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560004, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Valgerahalli",
+      "error": "Could not geocode locality: Valgerahalli"
+    },
+    {
+      "locality": "Varthur",
+      "neighbourhood_score": 88.8,
+      "rera_score": 75.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 0,
+      "avg_complaints": null,
+      "amenity_counts": {
+        "hospital": 34,
+        "school": 38,
+        "park": 54,
+        "metro": 0
+      },
+      "centre": {
+        "lat": 12.9406508,
+        "lon": 77.746988
+      },
+      "details": {
+        "geocoded_as": "Varthur, Bengaluru East City Corporation, Bengaluru, Bangalore East, Bengaluru Urban, Karnataka, 560087, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Vasanth Nagar",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 10,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 149,
+        "school": 172,
+        "park": 97,
+        "metro": 6
+      },
+      "centre": {
+        "lat": 12.9921738,
+        "lon": 77.591459
+      },
+      "details": {
+        "geocoded_as": "Vasanth Nagar, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560052, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Venkatapur",
+      "neighbourhood_score": 88.8,
+      "rera_score": 75.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 0,
+      "avg_complaints": null,
+      "amenity_counts": {
+        "hospital": 122,
+        "school": 140,
+        "park": 114,
+        "metro": 3
+      },
+      "centre": {
+        "lat": 12.9217806,
+        "lon": 77.6363478
+      },
+      "details": {
+        "geocoded_as": "Chikanna Madevi HPS Venkatapur, Venkatapur, Sector 5, HSR Layout, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560034, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Venugopal Nagar",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 1,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 36,
+        "school": 118,
+        "park": 90,
+        "metro": 0
+      },
+      "centre": {
+        "lat": 12.8722269,
+        "lon": 77.5995362
+      },
+      "details": {
+        "geocoded_as": "GHPS Venugopal Nagar, Venugopal Nagar, Hulimavu, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560076, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Vidyanagar",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 1,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 2,
+        "school": 11,
+        "park": 17,
+        "metro": 0
+      },
+      "centre": {
+        "lat": 13.161533,
+        "lon": 77.635198
+      },
+      "details": {
+        "geocoded_as": "Vintage Paying Guest, Vidyanagar, New Airport Road, Kadiganahalli, Chikkajala, Bengaluru, Yelahanka taluku, Bengaluru Urban, Karnataka, 562134, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Vinayaka Layout",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 27,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 116,
+        "school": 54,
+        "park": 101,
+        "metro": 2
+      },
+      "centre": {
+        "lat": 12.9682111,
+        "lon": 77.5116639
+      },
+      "details": {
+        "geocoded_as": "Vinayaka Layout, Bengaluru West City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560072, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Vittasandra",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 1,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 21,
+        "school": 67,
+        "park": 46,
+        "metro": 3
+      },
+      "centre": {
+        "lat": 12.8699226,
+        "lon": 77.6272278
+      },
+      "details": {
+        "geocoded_as": "Vittasandra Main Road, Beguru, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560114, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Viveka, Austin Town",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 1,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 157,
+        "school": 221,
+        "park": 114,
+        "metro": 3
+      },
+      "centre": {
+        "lat": 12.9541946,
+        "lon": 77.6185446
+      },
+      "details": {
+        "geocoded_as": "Bala Aesu Vidyalaya HPS Viveka, Austin Town W No 71, Viveka, Austin Town, Vannarpet, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560047, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Vivekanagar, Austin Town",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 2,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 164,
+        "school": 225,
+        "park": 120,
+        "metro": 3
+      },
+      "centre": {
+        "lat": 12.9572323,
+        "lon": 77.6179802
+      },
+      "details": {
+        "geocoded_as": "Babymirror HPS Vivekanagar, Austin Town W No 71, Vivekanagar, Austin Town W, Vannarpet, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560047, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Vivekanagar, Austin Town W",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 2,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 164,
+        "school": 225,
+        "park": 9,
+        "metro": 0
+      },
+      "centre": {
+        "lat": 12.9572323,
+        "lon": 77.6179802
+      },
+      "details": {
+        "geocoded_as": "Babymirror HPS Vivekanagar, Austin Town W No 71, Vivekanagar, Austin Town W, Vannarpet, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560047, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Vivekanagara",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 5,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 150,
+        "school": 222,
+        "park": 120,
+        "metro": 3
+      },
+      "centre": {
+        "lat": 12.9542989,
+        "lon": 77.6227577
+      },
+      "details": {
+        "geocoded_as": "Vivekanagara, 4th Cross Road, Viveknagar, Vannarpet, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560047, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Vivekangara",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 3,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 153,
+        "school": 228,
+        "park": 8,
+        "metro": 0
+      },
+      "centre": {
+        "lat": 12.9552253,
+        "lon": 77.6210383
+      },
+      "details": {
+        "geocoded_as": "GKHPS Vivekangara, Vivekangara, Vannarpet, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560047, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Whitefield",
+      "neighbourhood_score": 92.8,
+      "rera_score": 84.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 9,
+      "avg_complaints": 1.33,
+      "amenity_counts": {
+        "hospital": 17,
+        "school": 43,
+        "park": 44,
+        "metro": 4
+      },
+      "centre": {
+        "lat": 12.9957428,
+        "lon": 77.7579489
+      },
+      "details": {
+        "geocoded_as": "Whitefield (Kadugodi), SH35, Belathur, Bengaluru East City Corporation, Bengaluru, Bangalore East, Bengaluru Urban, Karnataka, 560067, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Willson Garden",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 2,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 220,
+        "school": 260,
+        "park": 118,
+        "metro": 5
+      },
+      "centre": {
+        "lat": 12.9492633,
+        "lon": 77.5974085
+      },
+      "details": {
+        "geocoded_as": "Maruthi KHPS Willson Garden, Willson Garden, Hombegowda Nagara, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560027, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Wilson Garden",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 2,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 228,
+        "school": 262,
+        "park": 117,
+        "metro": 5
+      },
+      "centre": {
+        "lat": 12.9489339,
+        "lon": 77.5968273
+      },
+      "details": {
+        "geocoded_as": "Wilson Garden, Hombegowda Nagara, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560027, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Yadiyur",
+      "neighbourhood_score": 88.8,
+      "rera_score": 75.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 0,
+      "avg_complaints": null,
+      "amenity_counts": {
+        "hospital": 285,
+        "school": 216,
+        "park": 125,
+        "metro": 9
+      },
+      "centre": {
+        "lat": 12.9308366,
+        "lon": 77.5882379
+      },
+      "details": {
+        "geocoded_as": "Tejaswini KHPS Yadiyur, Yadiyur, Jayanagar 3 East Block, Byrasandra, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560011, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Yadiyuru",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 1,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 301,
+        "school": 179,
+        "park": 9,
+        "metro": 0
+      },
+      "centre": {
+        "lat": 12.9270984,
+        "lon": 77.5766513
+      },
+      "details": {
+        "geocoded_as": "Yadiyuru Maternity Hospital, Kanakapura Road, Jayanagar 7th Block, Devagiri Temple Ward, Bengaluru West City Corporation, Bengaluru, Bangalore South, Bengaluru North, Karnataka, 560082, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Yalagondana Palya",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 1,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 150,
+        "school": 228,
+        "park": 13,
+        "metro": 0
+      },
+      "centre": {
+        "lat": 12.9632271,
+        "lon": 77.6130692
+      },
+      "details": {
+        "geocoded_as": "GUMPS Yalagondana Palya, Linden Street, Anglo-Indian Quarters, Victoria Layout, Ashokanagar, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560047, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Yelahanka",
+      "neighbourhood_score": 88.8,
+      "rera_score": 75.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 0,
+      "avg_complaints": null,
+      "amenity_counts": {
+        "hospital": 85,
+        "school": 65,
+        "park": 94,
+        "metro": 0
+      },
+      "centre": {
+        "lat": 13.1006982,
+        "lon": 77.5963454
+      },
+      "details": {
+        "geocoded_as": "Yelahanka, Yelahanka Old Town, Bengaluru North City Corporation, Bengaluru, Yelahanka taluku, Bengaluru Urban, Karnataka, 560064, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Yelenahalli",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 1,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 17,
+        "school": 83,
+        "park": 66,
+        "metro": 0
+      },
+      "centre": {
+        "lat": 12.8646227,
+        "lon": 77.6081639
+      },
+      "details": {
+        "geocoded_as": "Yelenahalli, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Yellukunte",
+      "neighbourhood_score": 88.8,
+      "rera_score": 75.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 0,
+      "avg_complaints": null,
+      "amenity_counts": {
+        "hospital": 92,
+        "school": 115,
+        "park": 92,
+        "metro": 5
+      },
+      "centre": {
+        "lat": 12.9044961,
+        "lon": 77.6415825
+      },
+      "details": {
+        "geocoded_as": "Yellukunte, Agara, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560068, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Yeshwantpur",
+      "neighbourhood_score": 88.8,
+      "rera_score": 75.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 0,
+      "avg_complaints": null,
+      "amenity_counts": {
+        "hospital": 140,
+        "school": 154,
+        "park": 143,
+        "metro": 6
+      },
+      "centre": {
+        "lat": 13.0221838,
+        "lon": 77.5530824
+      },
+      "details": {
+        "geocoded_as": "Yeswanthpur, Yeshwanthpura, Bengaluru North City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560022, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "Yeshwantpur Industrial Estate",
+      "error": "Could not geocode locality: Yeshwantpur Industrial Estate"
+    },
+    {
+      "locality": "Yeshwantpura",
+      "neighbourhood_score": 88.8,
+      "rera_score": 75.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 0,
+      "avg_complaints": null,
+      "amenity_counts": {
+        "hospital": 122,
+        "school": 139,
+        "park": 135,
+        "metro": 6
+      },
+      "centre": {
+        "lat": 13.0232678,
+        "lon": 77.5498751
+      },
+      "details": {
+        "geocoded_as": "Yeshwantpur, Tumkur Road, Goraguntepalya, Bengaluru West City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560022, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "\u015aiv\u0101jinagara",
+      "neighbourhood_score": 100.0,
+      "rera_score": 100.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 4,
+      "avg_complaints": 0.0,
+      "amenity_counts": {
+        "hospital": 130,
+        "school": 186,
+        "park": 96,
+        "metro": 6
+      },
+      "centre": {
+        "lat": 12.9855286,
+        "lon": 77.6054496
+      },
+      "details": {
+        "geocoded_as": "Shivajinagar, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560051, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    },
+    {
+      "locality": "\u0c97\u0ccb\u0cb5\u0cbf\u0c82\u0ca6\u0cb6\u0cc6\u0c9f\u0ccd\u0c9f\u0cbf \u0caa\u0cbe\u0cb3\u0ccd\u0caf",
+      "neighbourhood_score": 88.8,
+      "rera_score": 75.0,
+      "amenity_score": 100.0,
+      "rera_projects_matched": 0,
+      "avg_complaints": null,
+      "amenity_counts": {
+        "hospital": 28,
+        "school": 45,
+        "park": 32,
+        "metro": 6
+      },
+      "centre": {
+        "lat": 12.8539353,
+        "lon": 77.6717128
+      },
+      "details": {
+        "geocoded_as": "GHPS Govindashetty Palya, \u0c97\u0ccb\u0cb5\u0cbf\u0c82\u0ca6\u0cb6\u0cc6\u0c9f\u0ccd\u0c9f\u0cbf \u0caa\u0cbe\u0cb3\u0ccd\u0caf, Bangalore South, Bengaluru Urban, Karnataka, 560100, India",
+        "radius_km": 3.0,
+        "rera_weight": 0.45,
+        "amenity_weight": 0.55
+      }
+    }
+  ]
+}
