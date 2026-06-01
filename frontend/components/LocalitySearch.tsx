@@ -80,13 +80,13 @@ export function LocalitySearch({
   };
 
   return (
-    <div className={`relative z-50 flex w-full flex-col items-center ${compact ? "max-w-[640px]" : "max-w-[620px]"}`}>
+    <div className={`relative z-50 flex w-full flex-col items-center ${compact ? "max-w-[720px]" : "max-w-[760px]"}`}>
       {!compact && (
-        <div className="mb-10 text-center">
-          <h1 className="hero-text-shadow text-[38px] font-semibold leading-[1.05] tracking-tight text-white sm:text-[54px]">
+        <div className="mb-12 text-center">
+          <h1 className="hero-text-shadow text-[48px] font-semibold leading-[1.03] tracking-tight text-white sm:text-[72px]">
             Neighbourhood Intelligence
           </h1>
-          <p className="hero-text-shadow mt-3 text-[14px] font-medium uppercase tracking-[0.22em] text-[#9CA3AF] sm:text-[15px]">
+          <p className="hero-text-shadow mt-4 text-[15px] font-medium uppercase tracking-[0.26em] text-[#9CA3AF] sm:text-[18px]">
             for Bangalore
           </p>
         </div>
@@ -119,7 +119,7 @@ export function LocalitySearch({
               autoComplete="off"
               spellCheck={false}
               disabled={loading}
-              className="hero-input h-14 w-full rounded-full border border-white/15 bg-black/40 px-6 text-[16px] text-[#F5F5F5] outline-none backdrop-blur-md transition-[border-color,box-shadow,background-color] placeholder:text-white/45 focus:border-[#16C784]/70 focus:bg-black/55 focus:shadow-[0_0_0_4px_rgba(22,199,132,0.18)] disabled:opacity-50"
+              className="hero-input h-16 w-full rounded-full border border-white/15 bg-black/40 px-7 text-[18px] text-[#F5F5F5] outline-none backdrop-blur-md transition-[border-color,box-shadow,background-color] placeholder:text-white/45 focus:border-[#16C784]/70 focus:bg-black/55 focus:shadow-[0_0_0_4px_rgba(22,199,132,0.18)] disabled:opacity-50"
               aria-label="Search Bangalore locality"
             />
 
@@ -158,7 +158,7 @@ export function LocalitySearch({
           <button
             type="submit"
             disabled={loading || !query.trim()}
-            className="h-14 shrink-0 rounded-full bg-[#16C784] px-7 text-[15px] font-medium text-[#080808] transition-colors hover:bg-[#12A86F] disabled:cursor-not-allowed disabled:opacity-40"
+            className="h-16 shrink-0 rounded-full bg-[#16C784] px-9 text-[16px] font-medium text-[#080808] transition-colors hover:bg-[#12A86F] disabled:cursor-not-allowed disabled:opacity-40"
           >
             {loading ? "…" : "Search"}
           </button>
@@ -176,21 +176,21 @@ export function LocalitySearch({
       </form>
 
       {showFamousPicks && famous.length > 0 && (
-        <div className="mt-7 flex flex-col items-center">
-          <div className="flex flex-wrap justify-center gap-2.5">
+        <div className="mt-8 flex flex-col items-center">
+          <div className="flex flex-wrap justify-center gap-3">
             {famous.map((item) => (
               <button
                 key={item.locality}
                 type="button"
                 onClick={() => pick(item.locality)}
                 disabled={loading}
-                className="rounded-full border border-white/15 bg-black/30 px-4 py-2 text-[13px] text-[#E8E8E8] backdrop-blur-md transition-colors hover:border-[#16C784]/60 hover:bg-black/45 hover:text-white disabled:opacity-40"
+                className="rounded-full border border-white/15 bg-black/30 px-5 py-2.5 text-[14px] text-[#E8E8E8] backdrop-blur-md transition-colors hover:border-[#16C784]/60 hover:bg-black/45 hover:text-white disabled:opacity-40"
               >
                 {item.locality}
               </button>
             ))}
           </div>
-          <p className="hero-text-shadow mt-6 text-[12px] text-[#9A9A9A]">
+          <p className="hero-text-shadow mt-7 text-[13px] text-[#9A9A9A]">
             Or type any of 174+ neighbourhoods across Bangalore
           </p>
         </div>
