@@ -5,14 +5,11 @@ import type {
   ReportResponse,
 } from "./types";
 
-/** Backend base URL — set `NEXT_PUBLIC_API_URL` in production. */
-export function getApiBase(): string {
-  const url = process.env.NEXT_PUBLIC_API_URL?.trim();
-  if (url) return url.replace(/\/$/, "");
-  return "http://localhost:8000";
-}
-
-const API_BASE = getApiBase();
+/**
+ * All endpoints live under the same Next.js deployment as `/api/*`, so we use
+ * relative paths everywhere. No `NEXT_PUBLIC_API_URL` needed.
+ */
+const API_BASE = "/api";
 
 export const NOT_FOUND_MESSAGE =
   "No data yet for this area. Try Indiranagar, Whitefield or Koramangala.";

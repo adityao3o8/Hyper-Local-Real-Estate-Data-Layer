@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import maplibregl, { type GeoJSONSource, type Map as MapLibreMap, type Marker } from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
-import { fetchAmenities, getApiBase } from "@/lib/api";
+import { fetchAmenities } from "@/lib/api";
 import type { MapAmenity, ReportResponse } from "@/lib/types";
 
 const MAP_STYLE = "https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json";
@@ -170,7 +170,7 @@ export default function Map({ data }: { data: ReportResponse }) {
       } catch (err) {
         console.error("[Map] amenities load failed:", err);
         if (!disposed) {
-          setMapError(`Could not load amenity pins. Check the API at ${getApiBase()}.`);
+          setMapError("Could not load amenity pins. Try again in a moment.");
         }
       }
     };
