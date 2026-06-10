@@ -3,17 +3,22 @@
 import dynamic from "next/dynamic";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { fetchLocalities, fetchReport } from "@/lib/api";
+import { fetchLocalities, fetchReportWithPrices } from "@/lib/api";
 import { pickFamousLocalities } from "@/lib/localitySearch";
 import type { LocalitySummary, ReportResponse } from "@/lib/types";
-import { ResultsPanel } from "./ResultsPanel";
+import { HeroBackground } from "./HeroBackground";
 import { TopProgressBar } from "./TopProgressBar";
-import { ComparePanel } from "./ComparePanel";
-import { LocalitySearch } from "./LocalitySearch";
+import { HomeBackButton } from "./home/HomeBackButton";
+import { HomeSearchHeader } from "./home/HomeSearchHeader";
+import { ScrollProgress } from "./scroll/ScrollProgress";
 
-const VantaHeroBackground = dynamic(
-  () =>
-    import("@/components/VantaHeroBackground").then((m) => m.VantaHeroBackground),
+const ResultsPanel = dynamic(
+  () => import("./ResultsPanel").then((m) => m.ResultsPanel),
+  { ssr: false, loading: () => null }
+);
+
+const ComparePanel = dynamic(
+  () => import("./ComparePanel").then((m) => m.ComparePanel),
   { ssr: false, loading: () => null }
 );
 
@@ -58,7 +63,7 @@ export function HomePage() {
     setHasSearched(true);
 
     try {
-      const data = await fetchReport(trimmed);
+      const data = await fetchReportWithPrices(trimmed);
       setResult(data);
       setError(null);
     } catch (err) {
@@ -75,7 +80,7 @@ export function HomePage() {
     if (!trimmed) return;
     setCompareLoading(true);
     try {
-      const data = await fetchReport(trimmed);
+      const data = await fetchReportWithPrices(trimmed);
       setCompareResult(data);
     } catch {
       setCompareResult(null);
@@ -105,83 +110,41 @@ export function HomePage() {
   const showResults = hasSearched && result !== null && !loading;
 
   return (
-    <div className="relative min-h-screen bg-transparent text-[#F5F5F5]">
+    <div className="relative min-h-screen text-[#efefef]" style={{ background: "#070709" }}>
       <TopProgressBar active={loading || compareLoading} />
-      <VantaHeroBackground layoutKey={showResults ? result?.locality : "hero"} />
+      {showResults && <ScrollProgress />}
+      <HeroBackground />
 
       <AnimatePresence>
-        {showResults && (
-          <motion.button
-            type="button"
-            onClick={goHome}
-            initial={{ opacity: 0, y: -8 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -8 }}
-            className="no-print fixed left-6 top-6 z-50 flex items-center gap-2 rounded-full border border-white/15 bg-black/50 px-4 py-2 text-[13px] font-medium text-[#E8E8E8] backdrop-blur-md transition-colors hover:border-[#16C784]/60 hover:bg-black/70 hover:text-white"
-            aria-label="Back to home"
-          >
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-              <path d="M19 12H5" />
-              <path d="m12 19-7-7 7-7" />
-            </svg>
-            Home
-          </motion.button>
-        )}
+        {showResults && <HomeBackButton onClick={goHome} />}
       </AnimatePresence>
-      <div
-        className={`noise-layer z-[2] ${focused ? "visible" : ""}`}
-        aria-hidden
+
+      <div className={`noise-layer z-[2] ${focused ? "visible" : ""}`} aria-hidden />
+
+      <HomeSearchHeader
+        query={query}
+        onQueryChange={setQuery}
+        onSearch={search}
+        loading={loading}
+        focused={focused}
+        onFocusChange={setFocused}
+        showResults={showResults}
+        showCompare={showResults}
+        onCompareClick={() => setCompareOpen(true)}
+        famous={famous}
+        catalog={catalog}
+        error={error}
+        inputRef={inputRef}
       />
-
-      <motion.header
-        className="no-print relative z-30 flex flex-col items-center justify-center px-6 pointer-events-none"
-        animate={{
-          minHeight: showResults ? "auto" : "100vh",
-          paddingTop: showResults ? "3rem" : "0",
-          paddingBottom: showResults ? "1.5rem" : "0",
-        }}
-        transition={{ type: "spring", stiffness: 100, damping: 20 }}
-      >
-        <div className="pointer-events-auto relative z-40 flex w-full flex-col items-center px-4">
-          <LocalitySearch
-            query={query}
-            onQueryChange={setQuery}
-            onSearch={search}
-            loading={loading}
-            focused={focused}
-            onFocusChange={setFocused}
-            showCompare={showResults}
-            onCompareClick={() => setCompareOpen(true)}
-            famous={famous}
-            catalog={catalog}
-            showFamousPicks={!showResults}
-            compact={showResults}
-            inputRef={inputRef}
-          />
-
-          <AnimatePresence mode="wait">
-            {error && !loading && (
-              <motion.p
-                key="error"
-                className="mt-6 max-w-md text-center text-[13px] leading-relaxed text-[#EF4444]"
-                initial={{ opacity: 0, y: 4 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0 }}
-              >
-                {error}
-              </motion.p>
-            )}
-          </AnimatePresence>
-        </div>
-      </motion.header>
 
       <AnimatePresence mode="wait">
         {showResults && result && (
           <motion.div
             key={result.locality}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0 }}
+            transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
           >
             <ResultsPanel data={result} />
           </motion.div>
@@ -192,7 +155,7 @@ export function HomePage() {
         {compareOpen && result && (
           <>
             <motion.div
-              className="no-print fixed inset-0 z-40 bg-black/60"
+              className="no-print fixed inset-0 z-40 bg-black/70"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -208,7 +171,6 @@ export function HomePage() {
           </>
         )}
       </AnimatePresence>
-
     </div>
   );
 }

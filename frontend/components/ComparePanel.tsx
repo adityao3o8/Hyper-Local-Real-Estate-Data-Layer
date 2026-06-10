@@ -16,11 +16,19 @@ function Delta({
 }) {
   const diff = primary - compare;
   const better = diff > 0;
-  const color = better ? "#16C784" : diff < 0 ? "#EF4444" : "#666666";
+  const color = better ? "#16C784" : diff < 0 ? "#EF4444" : "#52525e";
   const arrow = better ? "↑" : diff < 0 ? "↓" : "→";
   const qualifier = better ? "better" : diff < 0 ? "worse" : "same as";
+
   return (
-    <span className="text-[11px] tabular-nums" style={{ color, fontFamily: "ui-monospace, monospace" }}>
+    <span
+      className="tabular-nums"
+      style={{
+        color,
+        fontFamily: "var(--font-space-mono), monospace",
+        fontSize: "11px",
+      }}
+    >
       {diff > 0 ? "+" : ""}
       {diff.toFixed(1)} {qualifier} than {compareName} {arrow}
     </span>
@@ -49,23 +57,39 @@ export function ComparePanel({
 
   return (
     <motion.aside
-      className="fixed right-0 top-0 z-50 flex h-full w-full max-w-md flex-col border-l border-[#1A1A1A] bg-[#080808] p-6 shadow-2xl"
+      className="fixed right-0 top-0 z-50 flex h-full w-full max-w-md flex-col p-7 shadow-2xl"
+      style={{
+        border: "none",
+        borderLeft: "1px solid rgba(255,255,255,0.06)",
+        background: "rgba(7, 7, 9, 0.97)",
+        backdropFilter: "blur(24px)",
+      }}
       initial={{ x: "100%" }}
       animate={{ x: 0 }}
       exit={{ x: "100%" }}
-      transition={{ type: "spring", stiffness: 100, damping: 20 }}
+      transition={{ type: "spring", stiffness: 120, damping: 24 }}
     >
       <div className="flex items-center justify-between">
-        <h2 className="text-[11px] uppercase tracking-[0.2em] text-[#666666]">
+        <p
+          className="uppercase tracking-[0.25em]"
+          style={{
+            fontFamily: "var(--font-space-mono), monospace",
+            fontSize: "9px",
+            color: "#3a3a48",
+          }}
+        >
           Compare localities
-        </h2>
+        </p>
         <button
           type="button"
           onClick={onClose}
-          className="text-[20px] leading-none text-[#666666] hover:text-[#F5F5F5]"
+          className="flex h-8 w-8 items-center justify-center rounded-lg transition-colors hover:bg-white/[0.06]"
+          style={{ color: "#52525e" }}
           aria-label="Close compare"
         >
-          ×
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
+            <path d="M18 6 6 18" /><path d="m6 6 12 12" />
+          </svg>
         </button>
       </div>
 
@@ -74,72 +98,84 @@ export function ComparePanel({
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Second locality…"
-          className="flex-1 border border-[#1A1A1A] bg-[#0F0F0F] px-3 py-2 text-[14px] text-[#F5F5F5] outline-none focus:border-[#333333]"
+          className="flex-1 rounded-xl px-4 py-2.5 text-[14px] text-[#efefef] outline-none transition-colors"
+          style={{
+            border: "1px solid rgba(255,255,255,0.08)",
+            background: "rgba(255,255,255,0.03)",
+          }}
+          onFocus={(e) => (e.target.style.borderColor = "rgba(22,199,132,0.4)")}
+          onBlur={(e) => (e.target.style.borderColor = "rgba(255,255,255,0.08)")}
         />
         <button
           type="submit"
           disabled={loading || !query.trim()}
-          className="border border-[#1A1A1A] bg-[#0F0F0F] px-4 py-2 text-[12px] text-[#F5F5F5] disabled:opacity-40"
+          className="rounded-xl px-5 py-2.5 text-[13px] font-medium transition-all hover:bg-[#13b876] disabled:opacity-40"
+          style={{ background: "#16C784", color: "#070709" }}
         >
-          Go
+          {loading ? "…" : "Go"}
         </button>
       </form>
 
       {compare && (
         <div className="mt-8 space-y-6 overflow-y-auto">
           <div className="grid grid-cols-2 gap-4">
-            <div>
-              <p className="text-[10px] uppercase tracking-wider text-[#666666]">
-                {primary.locality}
-              </p>
-              <p
-                className="mt-2 text-[48px] tabular-nums leading-none"
-                style={{ color: scoreColor(primary.neighbourhood_score) }}
-              >
-                {primary.neighbourhood_score.toFixed(1)}
-              </p>
-            </div>
-            <div>
-              <p className="text-[10px] uppercase tracking-wider text-[#666666]">
-                {compare.locality}
-              </p>
-              <p
-                className="mt-2 text-[48px] tabular-nums leading-none"
-                style={{ color: scoreColor(compare.neighbourhood_score) }}
-              >
-                {compare.neighbourhood_score.toFixed(1)}
-              </p>
-            </div>
+            {[
+              { data: primary, label: "Primary" },
+              { data: compare, label: "Compare" },
+            ].map(({ data, label }) => (
+              <div key={data.locality}>
+                <p
+                  className="uppercase tracking-[0.18em]"
+                  style={{
+                    fontFamily: "var(--font-space-mono), monospace",
+                    fontSize: "9px",
+                    color: "#3a3a48",
+                  }}
+                >
+                  {data.locality}
+                </p>
+                <p
+                  className="mt-2 tabular-nums leading-none"
+                  style={{
+                    fontFamily: "var(--font-syne), ui-sans-serif, sans-serif",
+                    fontSize: "48px",
+                    fontWeight: 700,
+                    color: scoreColor(data.neighbourhood_score),
+                  }}
+                >
+                  {data.neighbourhood_score.toFixed(1)}
+                </p>
+              </div>
+            ))}
           </div>
 
-          <div className="space-y-3 border-t border-[#1A1A1A] pt-4 text-[13px]">
-            <div className="flex flex-col gap-1 sm:flex-row sm:justify-between">
-              <span className="text-[#666666]">Overall</span>
-              <Delta
-                primary={primary.neighbourhood_score}
-                compare={compare.neighbourhood_score}
-                compareName={compare.locality}
-              />
-            </div>
-            <div className="flex flex-col gap-1 sm:flex-row sm:justify-between">
-              <span className="text-[#666666]">RERA</span>
-              <Delta
-                primary={primary.rera_score}
-                compare={compare.rera_score}
-                compareName={compare.locality}
-              />
-            </div>
-            <div className="flex flex-col gap-1 sm:flex-row sm:justify-between">
-              <span className="text-[#666666]">Amenity</span>
-              <Delta
-                primary={primary.amenity_score}
-                compare={compare.amenity_score}
-                compareName={compare.locality}
-              />
-            </div>
+          <div
+            className="space-y-3 pt-5"
+            style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}
+          >
+            {[
+              { label: "Overall", pv: primary.neighbourhood_score, cv: compare.neighbourhood_score },
+              { label: "RERA", pv: primary.rera_score, cv: compare.rera_score },
+              { label: "Amenity", pv: primary.amenity_score, cv: compare.amenity_score },
+            ].map(({ label, pv, cv }) => (
+              <div key={label} className="flex items-start justify-between gap-3">
+                <span
+                  className="uppercase tracking-[0.12em]"
+                  style={{
+                    fontFamily: "var(--font-space-mono), monospace",
+                    fontSize: "9px",
+                    color: "#3a3a48",
+                    paddingTop: "2px",
+                  }}
+                >
+                  {label}
+                </span>
+                <Delta primary={pv} compare={cv} compareName={compare.locality} />
+              </div>
+            ))}
           </div>
 
-          <p className="text-[12px] leading-relaxed text-[#666666]">
+          <p style={{ fontSize: "13px", lineHeight: "1.7", color: "#52525e" }}>
             {primary.neighbourhood_score > compare.neighbourhood_score
               ? `${primary.locality} scores higher than ${compare.locality} on our composite index.`
               : `${compare.locality} outperforms ${primary.locality} on the composite index.`}

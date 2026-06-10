@@ -1,74 +1,95 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import { motion, useInView } from "framer-motion";
 import type { AmenityBreakdown } from "@/lib/types";
+import { StaggerReveal, StaggerItem } from "./scroll/Reveal";
 
 const CARDS = [
-  {
-    key: "hospital" as const,
-    icon: "🏥",
-    label: "Hospitals",
-    blurb: "World class healthcare access",
-  },
-  {
-    key: "school" as const,
-    icon: "🏫",
-    label: "Schools",
-    blurb: "Top rated educational institutes",
-  },
-  {
-    key: "park" as const,
-    icon: "🌳",
-    label: "Parks",
-    blurb: "Green cover & recreational spaces",
-  },
-  {
-    key: "metro" as const,
-    icon: "🚇",
-    label: "Metro",
-    blurb: "Direct metro connectivity",
-  },
+  { key: "hospital" as const, label: "Hospitals", color: "#EF4444", blurb: "Healthcare access" },
+  { key: "school" as const, label: "Schools", color: "#3B82F6", blurb: "Education" },
+  { key: "park" as const, label: "Parks", color: "#16C784", blurb: "Green cover" },
+  { key: "metro" as const, label: "Metro", color: "#F59E0B", blurb: "Connectivity" },
 ];
 
-function CountUp({ value }: { value: number }) {
+function CountUp({ value, color }: { value: number; color: string }) {
+  const ref = useRef<HTMLSpanElement>(null);
+  const inView = useInView(ref, { amount: 0.6, once: true });
   const [display, setDisplay] = useState(0);
+
   useEffect(() => {
+    if (!inView) return;
     const start = performance.now();
     let frame: number;
     const tick = (now: number) => {
-      const t = Math.min((now - start) / 1000, 1);
+      const t = Math.min((now - start) / 900, 1);
       const eased = 1 - Math.pow(1 - t, 3);
       setDisplay(Math.round(value * eased));
       if (t < 1) frame = requestAnimationFrame(tick);
     };
     frame = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(frame);
-  }, [value]);
-  return <span className="tabular-nums">{display}</span>;
+  }, [value, inView]);
+
+  return (
+    <span
+      ref={ref}
+      className="tabular-nums"
+      style={{
+        color,
+        fontFamily: "var(--font-syne), ui-sans-serif, sans-serif",
+        fontSize: "26px",
+        fontWeight: 700,
+        lineHeight: 1,
+        display: "inline-block",
+      }}
+    >
+      {display}
+    </span>
+  );
 }
 
 export function AmenityStatCards({ breakdown }: { breakdown: AmenityBreakdown }) {
   return (
-    <div className="mt-6 grid grid-cols-2 gap-3">
-      {CARDS.map((card, i) => (
-        <motion.div
-          key={card.key}
-          className="glass-panel group rounded-lg p-4 transition-all duration-300 hover:-translate-y-0.5 hover:border-[#16C78466] hover:shadow-[0_0_24px_-4px_rgba(22,199,132,0.25)]"
-          initial={{ opacity: 0, y: 8 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 + i * 0.08, duration: 0.4 }}
-        >
-          <div className="mb-2 text-lg">{card.icon}</div>
-          <p className="text-[22px] font-medium text-[#F5F5F5]">
-            <CountUp value={breakdown[card.key]} />
-          </p>
-          <p className="mt-1 text-[11px] text-[#666666]">{card.label}</p>
-          <p className="mt-2 text-[10px] leading-snug text-[#444444] group-hover:text-[#666666]">
-            {card.blurb}
-          </p>
-        </motion.div>
+    <StaggerReveal className="mt-6 grid grid-cols-2 gap-2.5" stagger={0.09} amount={0.2}>
+      {CARDS.map((card) => (
+        <StaggerItem key={card.key} direction="up" distance={20}>
+          <motion.div
+            className="group relative overflow-hidden rounded-xl p-4 transition-all duration-300"
+            style={{
+              border: "1px solid rgba(255,255,255,0.05)",
+              background: "rgba(255,255,255,0.02)",
+            }}
+            whileHover={{
+              y: -2,
+              borderColor: `${card.color}30`,
+              backgroundColor: `${card.color}08`,
+            }}
+          >
+            <div
+              className="mb-3 h-1.5 w-1.5 rounded-full"
+              style={{ background: card.color, boxShadow: `0 0 8px ${card.color}80` }}
+            />
+            <CountUp value={breakdown[card.key]} color={card.color} />
+            <p
+              className="mt-2 uppercase tracking-[0.14em]"
+              style={{
+                fontFamily: "var(--font-space-mono), monospace",
+                fontSize: "9px",
+                color: "#52525e",
+              }}
+            >
+              {card.label}
+            </p>
+            <p
+              className="mt-1 tracking-wide transition-colors group-hover:text-[#7a7a8a]"
+              style={{ fontSize: "10px", color: "#3a3a48" }}
+            >
+              {card.blurb}
+            </p>
+          </motion.div>
+        </StaggerItem>
       ))}
-    </div>
+    </StaggerReveal>
   );
 }

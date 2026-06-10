@@ -19,6 +19,7 @@ if str(ROOT) not in sys.path:
 load_dotenv(ROOT / ".env")
 
 from db.supabase_client import supabase_enabled
+from pipeline.property_prices import fetch_property_prices, summarize_prices
 from pipeline.report_generator import generate_report
 from pipeline.scorer import ScoreResult, build_map_amenities, score_locality
 
@@ -59,6 +60,16 @@ def get_groq_api_key() -> str:
         raise HTTPException(
             status_code=500,
             detail="GROQ_API_KEY not configured. Add it to .env in the project root.",
+        )
+    return api_key
+
+
+def get_serpapi_key() -> str:
+    api_key = os.getenv("SERPAPI_KEY") or os.getenv("SERP_API_KEY")
+    if not api_key:
+        raise HTTPException(
+            status_code=500,
+            detail="SERPAPI_KEY not configured. Sign up at https://serpapi.com and add SERPAPI_KEY to .env",
         )
     return api_key
 
@@ -113,6 +124,21 @@ def amenities(
         raise HTTPException(status_code=502, detail=f"Amenities fetch failed: {exc}") from exc
 
 
+@app.get("/property-price")
+def property_price(
+    locality: str = Query(..., description="Bangalore locality name"),
+    site: str = Query("magicbricks.com", description="site: filter for Google search"),
+) -> dict[str, Any]:
+    """SerpAPI → Google snippets (MagicBricks) with parsed ₹ / Cr / Lakh / sq ft prices."""
+    try:
+        result = fetch_property_prices(locality, site=site, api_key=get_serpapi_key())
+        return summarize_prices(result)
+    except HTTPException:
+        raise
+    except Exception as exc:
+        raise HTTPException(status_code=502, detail=f"Property price lookup failed: {exc}") from exc
+
+
 @app.get("/score")
 def score(locality: str = Query(..., description="Bangalore locality name")) -> dict[str, Any]:
     try:
@@ -149,4 +175,20 @@ def report(locality: str = Query(..., description="Bangalore locality name")) ->
             status_code=502, detail=f"Amenities fetch failed: {exc}"
         ) from exc
 
-    return {**score_data, "ai_report": ai_report, "amenities": map_amenities}
+    payload: dict[str, Any] = {**score_data, "ai_report": ai_report, "amenities": map_amenities}
+
+    serp_key = os.getenv("SERPAPI_KEY") or os.getenv("SERP_API_KEY")
+    if serp_key:
+        try:
+            price_result = fetch_property_prices(locality, api_key=serp_key)
+            payload["property_prices"] = summarize_prices(price_result)
+        except Exception as exc:
+            payload["property_prices"] = {
+                "error": f"Property price lookup failed: {exc}",
+                "locality": locality,
+                "query": "",
+                "source": "serpapi_google_magicbricks",
+                "price_mentions": [],
+            }
+
+    return payload

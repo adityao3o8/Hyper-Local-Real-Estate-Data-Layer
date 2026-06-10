@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "NODE_OPTIONS='--max-old-space-size=4096' next dev",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
@@ -12,15 +12,12 @@
     "framer-motion": "^12.40.0",
     "maplibre-gl": "^5.24.0",
     "next": "16.2.6",
-    "p5": "^2.3.0",
     "react": "19.2.4",
-    "react-dom": "19.2.4",
-    "vanta": "^0.5.24"
+    "react-dom": "19.2.4"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
-    "@types/p5": "^1.7.7",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",

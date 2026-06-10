@@ -1,6 +1,18 @@
-import type { AmenitiesResponse, LocalitiesResponse, ReportResponse } from "./types";
+import type {
+  AmenitiesResponse,
+  LocalitiesResponse,
+  PropertyPricesSummary,
+  ReportResponse,
+} from "./types";
 
-const API_BASE = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000";
+/** Backend base URL — set `NEXT_PUBLIC_API_URL` in production. */
+export function getApiBase(): string {
+  const url = process.env.NEXT_PUBLIC_API_URL?.trim();
+  if (url) return url.replace(/\/$/, "");
+  return "http://localhost:8000";
+}
+
+const API_BASE = getApiBase();
 
 export const NOT_FOUND_MESSAGE =
   "No data yet for this area. Try Indiranagar, Whitefield or Koramangala.";
@@ -40,6 +52,53 @@ export async function fetchReport(locality: string): Promise<ReportResponse> {
   }
 
   return response.json();
+}
+
+export async function fetchPropertyPrices(
+  locality: string
+): Promise<PropertyPricesSummary> {
+  const params = new URLSearchParams({ locality: locality.trim() });
+  const response = await fetch(`${API_BASE}/property-price?${params}`, {
+    cache: "no-store",
+  });
+
+  if (!response.ok) {
+    const body = await response.json().catch(() => ({}));
+    const detail =
+      typeof body.detail === "string"
+        ? body.detail
+        : `Property prices failed (${response.status})`;
+    throw new Error(detail);
+  }
+
+  return response.json();
+}
+
+/** Report + property prices (one SerpAPI call if report already includes prices). */
+export async function fetchReportWithPrices(
+  locality: string
+): Promise<ReportResponse> {
+  const data = await fetchReport(locality);
+  const hasPrices =
+    data.property_prices &&
+    ((data.property_prices.price_mentions?.length ?? 0) > 0 ||
+      data.property_prices.total_price_inr);
+
+  if (hasPrices) return data;
+
+  try {
+    data.property_prices = await fetchPropertyPrices(locality);
+  } catch {
+    data.property_prices = {
+      locality,
+      query: "",
+      source: "serpapi_google_magicbricks",
+      price_mentions: [],
+      error: "Property price lookup failed",
+    };
+  }
+
+  return data;
 }
 
 export function scoreColor(score: number): string {

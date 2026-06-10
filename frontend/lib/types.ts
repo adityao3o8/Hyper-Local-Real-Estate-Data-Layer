@@ -5,6 +5,31 @@ export interface AmenityBreakdown {
   metro: number;
 }
 
+export interface PriceMention {
+  raw: string;
+  amount_inr: number | null;
+  unit: string;
+  source_title: string;
+  source_link: string;
+}
+
+export interface PriceBand {
+  min: number;
+  max: number;
+  median: number;
+  sample_count: number;
+}
+
+export interface PropertyPricesSummary {
+  locality: string;
+  query: string;
+  source: string;
+  price_mentions: PriceMention[];
+  total_price_inr?: PriceBand;
+  per_sqft_inr?: PriceBand;
+  error?: string;
+}
+
 export interface ReportResponse {
   locality: string;
   neighbourhood_score: number;
@@ -16,6 +41,7 @@ export interface ReportResponse {
   centre: { lat: number; lon: number };
   ai_report: string;
   amenities?: MapAmenity[];
+  property_prices?: PropertyPricesSummary;
 }
 
 export interface LocalitySummary {

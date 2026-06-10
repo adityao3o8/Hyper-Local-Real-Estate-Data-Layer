@@ -1,10 +1,17 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Syne, Space_Mono } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
+const syne = Syne({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-syne",
+  display: "swap",
+});
+
+const spaceMono = Space_Mono({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-space-mono",
   display: "swap",
 });
 
@@ -19,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} h-full`}>
+    <html lang="en" className={`${syne.variable} ${spaceMono.variable} h-full`}>
       <body className="min-h-full overflow-x-hidden">{children}</body>
     </html>
   );
