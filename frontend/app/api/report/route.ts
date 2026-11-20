@@ -1,5 +1,6 @@
 import type { NextRequest } from "next/server";
 
+import { findPrescoredLocality } from "@/lib/server/data";
 import {
   errorResponse,
   handleException,
@@ -12,12 +13,12 @@ import {
   GeocodeError,
   buildMapAmenities,
   scoreLocality,
+  scoreResultFromPrescored,
   scoreResultToDict,
 } from "@/lib/server/scorer";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
-// Scoring + Groq + Overpass + (optionally) SerpAPI can be slow.
 export const maxDuration = 60;
 
 export async function GET(request: NextRequest) {
@@ -28,54 +29,62 @@ export async function GET(request: NextRequest) {
     return errorResponse(422, "locality query param is required");
   }
 
-  // 1. Score
+  const trimmed = locality.trim();
+
+  // 1. Score — prefer precomputed (no Nominatim / Overpass) to avoid 504s
   let result;
   try {
-    result = await scoreLocality(locality);
+    const prescored = await findPrescoredLocality(trimmed);
+    result = prescored ? scoreResultFromPrescored(prescored, trimmed) : null;
+    if (!result) {
+      result = await scoreLocality(trimmed, { useOverpass: false });
+    }
   } catch (err) {
     if (err instanceof GeocodeError) return errorResponse(404, err.message);
     return handleException(err);
   }
 
   const scoreData = scoreResultToDict(result);
+  const serpKey = optionalSerpApiKey();
 
-  // 2. AI report (Groq)
-  let aiReport: string;
-  try {
-    aiReport = await generateReport(scoreData, requireGroqKey());
-  } catch (err) {
-    return handleException(err);
+  // 2. Run AI + map pins + prices in parallel (each is best-effort where noted)
+  const [aiSettled, amenitiesSettled, pricesSettled] = await Promise.allSettled([
+    generateReport(scoreData, requireGroqKey()),
+    buildMapAmenities(result.centre_lat, result.centre_lon, 3, 120, {
+      useOverpass: false,
+    }),
+    serpKey
+      ? fetchPropertyPrices(trimmed, serpKey)
+      : Promise.resolve(null),
+  ]);
+
+  if (aiSettled.status === "rejected") {
+    return handleException(aiSettled.reason);
   }
-
-  // 3. Map amenities
-  let mapAmenities;
-  try {
-    mapAmenities = await buildMapAmenities(result.centre_lat, result.centre_lon);
-  } catch (err) {
-    return handleException(err);
+  if (amenitiesSettled.status === "rejected") {
+    return handleException(amenitiesSettled.reason);
   }
 
   const payload: Record<string, unknown> = {
     ...scoreData,
-    ai_report: aiReport,
-    amenities: mapAmenities,
+    ai_report: aiSettled.value,
+    amenities: amenitiesSettled.value,
   };
 
-  // 4. Best-effort property prices
-  const serpKey = optionalSerpApiKey();
-  if (serpKey) {
-    try {
-      payload.property_prices = await fetchPropertyPrices(locality, serpKey);
-    } catch (err) {
-      const msg = err instanceof Error ? err.message : String(err);
-      payload.property_prices = {
-        error: `Property price lookup failed: ${msg}`,
-        locality,
-        query: "",
-        source: "serpapi_google_magicbricks",
-        price_mentions: [],
-      };
-    }
+  if (pricesSettled.status === "fulfilled" && pricesSettled.value) {
+    payload.property_prices = pricesSettled.value;
+  } else if (serpKey && pricesSettled.status === "rejected") {
+    const msg =
+      pricesSettled.reason instanceof Error
+        ? pricesSettled.reason.message
+        : String(pricesSettled.reason);
+    payload.property_prices = {
+      error: `Property price lookup failed: ${msg}`,
+      locality: trimmed,
+      query: "",
+      source: "serpapi_google_magicbricks",
+      price_mentions: [],
+    };
   }
 
   return Response.json(payload);

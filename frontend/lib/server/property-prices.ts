@@ -147,7 +147,7 @@ async function serpapiGoogleSearch(
   url.searchParams.set("hl", "en");
 
   const res = await fetch(url, {
-    signal: AbortSignal.timeout(30_000),
+    signal: AbortSignal.timeout(10_000),
   });
   if (!res.ok) {
     throw new Error(`SerpAPI HTTP ${res.status}`);

@@ -42,7 +42,7 @@ export async function generateReport(
         { role: "user", content: buildUserPrompt(score) },
       ],
     }),
-    signal: AbortSignal.timeout(60_000),
+    signal: AbortSignal.timeout(20_000),
   });
 
   if (!res.ok) {

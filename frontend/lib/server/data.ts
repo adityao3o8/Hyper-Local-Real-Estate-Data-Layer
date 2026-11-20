@@ -35,6 +35,16 @@ export interface PrescoredLocality {
   neighbourhood_score: number;
   rera_score: number;
   amenity_score: number;
+  rera_projects_matched?: number;
+  avg_complaints?: number | null;
+  amenity_counts?: {
+    hospital: number;
+    school: number;
+    park: number;
+    metro: number;
+  };
+  centre?: { lat: number; lon: number };
+  details?: Record<string, unknown>;
   error?: string;
 }
 
@@ -128,4 +138,27 @@ export async function loadPrescoredLocalities(): Promise<PrescoredLocality[]> {
   const data = await readJson<{ scores?: PrescoredLocality[] }>(SCORES_PATH);
   _scoresCache = (data.scores ?? []).filter((s) => !("error" in s) || !s.error);
   return _scoresCache;
+}
+
+/** Prefer exact / contains match so "HSR Layout" hits "1st Sector HSR Layout". */
+export async function findPrescoredLocality(
+  locality: string,
+): Promise<PrescoredLocality | null> {
+  const all = await loadPrescoredLocalities();
+  const q = locality.replace(/\s+/g, " ").trim().toLowerCase();
+  if (!q) return null;
+
+  const exact = all.find((s) => s.locality.toLowerCase() === q);
+  if (exact?.centre) return exact;
+
+  const contains = all
+    .filter(
+      (s) =>
+        s.centre &&
+        (s.locality.toLowerCase().includes(q) ||
+          q.includes(s.locality.toLowerCase())),
+    )
+    .sort((a, b) => a.locality.length - b.locality.length);
+
+  return contains[0] ?? null;
 }

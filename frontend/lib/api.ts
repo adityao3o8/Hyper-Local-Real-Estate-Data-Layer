@@ -45,6 +45,12 @@ export async function fetchReport(locality: string): Promise<ReportResponse> {
       throw new Error(NOT_FOUND_MESSAGE);
     }
 
+    if (response.status === 504 || response.status === 408) {
+      throw new Error(
+        "Analysis timed out — try again in a moment, or pick another locality.",
+      );
+    }
+
     throw new Error(detail);
   }
 

@@ -8,6 +8,7 @@ import {
   loadOsmAmenities,
   loadReraProjects,
   type OsmAmenity,
+  type PrescoredLocality,
   type ReraProject,
 } from "./data";
 
@@ -241,7 +242,7 @@ async function fetchOverpassParksMetro(
         "User-Agent": USER_AGENT,
       },
       body: `data=${encodeURIComponent(query)}`,
-      signal: AbortSignal.timeout(45_000),
+      signal: AbortSignal.timeout(8_000),
     });
     if (!res.ok) return { park: 0, metro: 0 };
     const data = (await res.json()) as {
@@ -306,7 +307,7 @@ async function fetchOverpassAmenityPoints(
         "User-Agent": USER_AGENT,
       },
       body: `data=${encodeURIComponent(query)}`,
-      signal: AbortSignal.timeout(60_000),
+      signal: AbortSignal.timeout(8_000),
     });
     if (!res.ok) return points;
     const data = (await res.json()) as {
@@ -376,8 +377,12 @@ export async function buildMapAmenities(
   lon: number,
   radiusKm = RADIUS_KM,
   limitPerCategory = 120,
+  options: { useOverpass?: boolean } = {},
 ): Promise<MapAmenity[]> {
+  const useOverpass = options.useOverpass ?? false;
   const points = await getNearbyAmenities(lat, lon, radiusKm, limitPerCategory);
+  if (!useOverpass) return points;
+
   const existing = new Set(
     points.map((p) => `${p.lat}|${p.lon}|${p.category}`),
   );
@@ -403,14 +408,17 @@ export async function scoreLocality(
   locality: string,
   options: { useOverpass?: boolean } = {},
 ): Promise<ScoreResult> {
-  const useOverpass = options.useOverpass ?? true;
+  // Overpass is opt-in — default off so Vercel /api/report stays under gateway limits.
+  const useOverpass = options.useOverpass ?? false;
   const { lat, lon, display_name } = await geocodeLocality(locality);
 
-  const reraProjects = await loadReraProjects();
+  const [reraProjects, osm] = await Promise.all([
+    loadReraProjects(),
+    loadOsmAmenities(),
+  ]);
   const matched = matchReraProjects(reraProjects, locality);
   const { score: reraScore, avg_complaints } = computeReraScore(matched);
 
-  const osm = await loadOsmAmenities();
   const counts = countLocalAmenities(osm, lat, lon);
 
   if (useOverpass) {
@@ -437,6 +445,36 @@ export async function scoreLocality(
       radius_km: RADIUS_KM,
       rera_weight: 0.45,
       amenity_weight: 0.55,
+    },
+  };
+}
+
+/** Build a ScoreResult from the precomputed scores JSON (skips geocode + OSM scan). */
+export function scoreResultFromPrescored(
+  entry: PrescoredLocality,
+  requestedLocality: string,
+): ScoreResult | null {
+  if (!entry.centre) return null;
+  const counts = entry.amenity_counts ?? {
+    hospital: 0,
+    school: 0,
+    park: 0,
+    metro: 0,
+  };
+  return {
+    locality: requestedLocality,
+    centre_lat: entry.centre.lat,
+    centre_lon: entry.centre.lon,
+    rera_score: entry.rera_score,
+    amenity_score: entry.amenity_score,
+    neighbourhood_score: entry.neighbourhood_score,
+    rera_projects_matched: entry.rera_projects_matched ?? 0,
+    avg_complaints: entry.avg_complaints ?? null,
+    amenity_counts: counts,
+    details: {
+      ...(entry.details ?? {}),
+      source: "prescored",
+      matched_prescored_locality: entry.locality,
     },
   };
 }
