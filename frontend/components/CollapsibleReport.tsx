@@ -1,22 +1,39 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { Reveal } from "./scroll/Reveal";
+
+/** Split on sentence endings without breaking decimals like 71.5 or ₹1.2 Cr. */
+function splitSentences(text: string): string[] {
+  const trimmed = text.trim();
+  if (!trimmed) return [];
+
+  // Shield digit.digit sequences so "71.5" is not treated as a sentence end.
+  const shielded = trimmed.replace(/(\d)\.(\d)/g, "$1\u0000$2");
+  const parts = shielded.match(/[^.!?]+[.!?]+(?:\s+|$)|[^.!?]+$/g);
+  if (!parts) return [trimmed];
+
+  return parts
+    .map((s) => s.replace(/\u0000/g, ".").trim())
+    .filter(Boolean);
+}
 
 export function CollapsibleReport({ text }: { text: string }) {
   const [open, setOpen] = useState(false);
 
-  const { preview, rest } = useMemo(() => {
-    const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];
-    if (sentences.length <= 2) return { preview: text, rest: "" };
+  const { preview, hasMore } = useMemo(() => {
+    const sentences = splitSentences(text);
+    if (sentences.length <= 2) {
+      return { preview: text.trim(), hasMore: false };
+    }
     return {
       preview: sentences.slice(0, 2).join(" ").trim(),
-      rest: sentences.slice(2).join(" ").trim(),
+      hasMore: true,
     };
   }, [text]);
 
-  const hasMore = Boolean(rest);
+  const display = open || !hasMore ? text.trim() : preview;
 
   return (
     <Reveal
@@ -27,23 +44,16 @@ export function CollapsibleReport({ text }: { text: string }) {
       className="mt-6 border-t pt-6"
       style={{ borderColor: "rgba(255,255,255,0.06)" }}
     >
-      <p className="leading-[1.85]" style={{ fontSize: "15px", color: "#c8c8d4", fontWeight: 400 }}>
-        {open || !hasMore ? text : preview}
-      </p>
-
-      <AnimatePresence>
-        {open && hasMore && (
-          <motion.p
-            className="mt-4 leading-[1.85]"
-            style={{ fontSize: "15px", color: "#c8c8d4" }}
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-          >
-            {rest}
-          </motion.p>
-        )}
-      </AnimatePresence>
+      <motion.p
+        key={open ? "full" : "preview"}
+        className="leading-[1.85]"
+        style={{ fontSize: "15px", color: "#c8c8d4", fontWeight: 400 }}
+        initial={{ opacity: 0.6 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.25 }}
+      >
+        {display || "AI analysis unavailable for this locality."}
+      </motion.p>
 
       {hasMore && (
         <motion.button
