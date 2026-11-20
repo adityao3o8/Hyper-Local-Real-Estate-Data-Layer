@@ -4,7 +4,7 @@
  */
 
 const GROQ_URL = "https://api.groq.com/openai/v1/chat/completions";
-const MODEL = "llama-3.1-8b-instant";
+const MODEL = "qwen/qwen3.8-27b";
 
 const SYSTEM_PROMPT = `You write concise neighbourhood guides for homebuyers in Bangalore, India.
 Given structured score data (RERA complaints, nearby amenities), write exactly one paragraph

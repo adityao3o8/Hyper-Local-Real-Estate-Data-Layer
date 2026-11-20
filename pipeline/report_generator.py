@@ -13,7 +13,7 @@ from dotenv import load_dotenv
 
 ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_SCORES_PATH = ROOT / "data" / "scores_bangalore.json"
-MODEL = "llama-3.1-8b-instant"
+MODEL = "qwen/qwen3.8-27b"
 
 SYSTEM_PROMPT = """You write concise neighbourhood guides for homebuyers in Bangalore, India.
 Given structured score data (RERA complaints, nearby amenities), write exactly one paragraph
