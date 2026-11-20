@@ -33,13 +33,16 @@ export interface PropertyPricesSummary {
 export interface ReportResponse {
   locality: string;
   neighbourhood_score: number;
-  rera_score: number;
+  /** null when no RERA projects matched this locality. */
+  rera_score: number | null;
+  rera_data_available?: boolean;
   amenity_score: number;
   amenity_breakdown: AmenityBreakdown;
   rera_projects_matched: number;
   avg_complaints: number | null;
   centre: { lat: number; lon: number };
   ai_report: string;
+  ai_report_available?: boolean;
   amenities?: MapAmenity[];
   property_prices?: PropertyPricesSummary;
 }
@@ -47,7 +50,7 @@ export interface ReportResponse {
 export interface LocalitySummary {
   locality: string;
   neighbourhood_score: number;
-  rera_score: number;
+  rera_score: number | null;
   amenity_score: number;
 }
 

@@ -36,8 +36,8 @@ and transparently falls back to the local JSON files otherwise.
 | Component | Source | Logic |
 |-----------|--------|-------|
 | RERA score | RERA Karnataka complaints | Fewer average complaints → higher score (0 complaints = 100; −12 pts each) |
-| Amenity score | OSM amenities within 3 km | Weighted: metro ×4, hospital ×3, school ×2, park ×2, saturating at 100 |
-| **Neighbourhood score** | — | `0.45 × RERA + 0.55 × amenity` |
+| Amenity score | OSM amenities within 3 km | Weighted points: metro ×4, hospital ×3, school ×2, park ×2; 1,500 points = 100 (calibrated on the scored localities so scores spread out) |
+| **Neighbourhood score** | — | `0.45 × RERA + 0.55 × amenity`. If no RERA project matches the locality there is **no RERA score** (shown as "No data") and the score is the amenity score alone |
 
 Locality names are matched to RERA records with fuzzy matching (`fuzzywuzzy`),
 and coordinates are resolved via Nominatim. Parks/metro are supplemented live

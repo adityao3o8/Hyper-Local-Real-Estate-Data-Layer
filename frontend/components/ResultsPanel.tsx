@@ -44,9 +44,9 @@ export function ResultsPanel({ data }: { data: ReportResponse }) {
   }[] = [
     {
       label: "RERA score",
-      display: data.rera_score.toFixed(1),
+      display: data.rera_score == null ? "No data" : data.rera_score.toFixed(1),
       seed: `${data.locality}-rera`,
-      sparkEnd: data.rera_score,
+      sparkEnd: data.rera_score ?? undefined,
     },
     {
       label: "Amenity score",

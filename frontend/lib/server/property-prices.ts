@@ -59,7 +59,7 @@ const PRICE_PATTERNS: PatternSpec[] = [
   },
   {
     key: "lakh",
-    regex: /(?:₹|Rs\.?|INR)?\s*([\d,]+(?:\.\d+)?)\s*(?:L|Lakh|Lac|lakhs?)\b/gi,
+    regex: /(?:₹|Rs\.?|INR)?\s*([\d,]+(?:\.\d+)?)\s*(L|Lakh|Lac|lakhs?)\b/gi,
   },
   {
     key: "rupees_large",
@@ -100,6 +100,15 @@ function parsePricesFromText(
     let match: RegExpExecArray | null;
     while ((match = regex.exec(text)) !== null) {
       const raw = match[0].trim();
+      // A bare "L" ("2 L-shaped balconies", "4 L of storage") is only a price
+      // when a currency marker comes first ("₹45 L").
+      if (
+        key === "lakh" &&
+        match[2].toLowerCase() === "l" &&
+        !/^(?:₹|rs\.?|inr)/i.test(raw)
+      ) {
+        continue;
+      }
       if (seen.has(raw)) continue;
       seen.add(raw);
       const amount = parseAmount(match[1]);

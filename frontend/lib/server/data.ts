@@ -33,7 +33,7 @@ export interface OsmAmenity {
 export interface PrescoredLocality {
   locality: string;
   neighbourhood_score: number;
-  rera_score: number;
+  rera_score: number | null;
   amenity_score: number;
   rera_projects_matched?: number;
   avg_complaints?: number | null;
