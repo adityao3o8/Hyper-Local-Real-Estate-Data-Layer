@@ -3,7 +3,7 @@
  * Port of pipeline/scorer.py.
  */
 
-import { partialRatio, tokenSetRatio } from "./fuzzy";
+import { ratio } from "./fuzzy";
 import {
   loadOsmAmenities,
   loadReraProjects,
@@ -24,6 +24,16 @@ const SCHOOL_TYPES = new Set([
   "kindergarten",
 ]);
 const FUZZY_LOCALITY_THRESHOLD = 85;
+
+/**
+ * Weighted amenity points that earn a full 100. Calibrated against the
+ * pre-scored Bangalore localities (p90 = 1332, max = 1598) so scores spread
+ * across the range instead of saturating after ~5 hospitals.
+ */
+export const AMENITY_FULL_SCORE_POINTS = 1500;
+
+/** Greater-Bengaluru bounding box; geocode hits outside it are rejected. */
+const BLR_BOUNDS = { latMin: 12.65, latMax: 13.3, lonMin: 77.3, lonMax: 77.9 };
 
 const USER_AGENT = "RealEstateNeighbourhoodScorer/1.0";
 
@@ -47,7 +57,9 @@ export interface ScoreResult {
   locality: string;
   centre_lat: number;
   centre_lon: number;
-  rera_score: number;
+  /** null when no RERA projects matched (no data; never invented). */
+  rera_score: number | null;
+  rera_data_available: boolean;
   amenity_score: number;
   neighbourhood_score: number;
   rera_projects_matched: number;
@@ -99,6 +111,33 @@ function localitySegments(text: string): string[] {
   return [...segments];
 }
 
+/**
+ * Words that appear in thousands of Bangalore place and project names. They
+ * say nothing about WHICH locality, so they are ignored when matching
+ * ("HSR Layout" must not match every "... Layout").
+ */
+const GENERIC_WORDS = new Set([
+  "LAYOUT", "NAGAR", "ROAD", "EXTENSION", "EXTN", "PHASE", "STAGE", "BLOCK",
+  "CROSS", "MAIN", "SECTOR", "TOWN", "COLONY", "CITY", "ENCLAVE", "GARDEN",
+  "GARDENS", "APARTMENTS", "APARTMENT", "RESIDENCY", "PROJECT", "INDUSTRIAL",
+  "AREA", "ESTATE", "THE", "AND", "OF", "BY",
+]);
+
+/** The distinctive part of a name: generic words removed. "" if nothing is left. */
+function coreOf(text: string): string {
+  return text
+    .split(/[^A-Z0-9]+/)
+    .filter((t) => t && !GENERIC_WORDS.has(t))
+    .join(" ");
+}
+
+/** True when `needle` appears in `hay` as whole word(s), not inside another word. */
+function containsWords(hay: string, needle: string): boolean {
+  if (!needle) return false;
+  const escaped = needle.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  return new RegExp(`(^|[^A-Z0-9])${escaped}($|[^A-Z0-9])`).test(hay);
+}
+
 function fuzzyLocalityMatches(
   query: string,
   haystack: string,
@@ -108,32 +147,87 @@ function fuzzyLocalityMatches(
   const h = normalizeLocality(haystack);
   if (!q || !h) return false;
 
-  if (h.includes(q) || q.includes(h)) return true;
-  if (partialRatio(q, h) >= threshold) return true;
+  // Compare the distinctive part of the query (fall back to all of it when the
+  // query is made only of generic words).
+  const qc = coreOf(q) || q;
 
-  for (const segment of localitySegments(h)) {
-    if (q === segment) return true;
-    if (q.includes(segment) || segment.includes(q)) return true;
-    if (partialRatio(q, segment) >= threshold) return true;
-    if (tokenSetRatio(q, segment) >= threshold) return true;
+  // The query's distinctive words appear as whole words in the record.
+  if (containsWords(h, qc)) return true;
+
+  for (const text of [h, ...localitySegments(h)]) {
+    const tc = coreOf(text);
+    if (!tc) continue;
+    // A short stored name (e.g. "NA", "IRA") sitting inside a longer query is
+    // coincidence, not a match: it must be a whole word and reasonably long.
+    if (tc.length >= 4 && containsWords(qc, tc)) return true;
+    if (wordWindowMatches(qc, tc, threshold)) return true;
   }
   return false;
+}
+
+/**
+ * Typo-tolerant match at WORD level: some run of 1-2 words of `text` must be
+ * (almost) the query. Comparing whole words stops "AGARA" matching inside
+ * "NAGARA"; requiring the same first letter stops "JAYANAGAR" matching
+ * "VIJAYANAGARA"; very short names must match exactly.
+ */
+function wordWindowMatches(qc: string, text: string, threshold: number): boolean {
+  const qWords = qc.split(" ").length;
+  const tWords = text.split(" ");
+  for (let k = Math.max(1, qWords - 1); k <= qWords + 1; k++) {
+    for (let i = 0; i + k <= tWords.length; i++) {
+      const w = tWords.slice(i, i + k).join(" ");
+      if (w === qc) return true;
+      if (qc.length <= 5 || w[0] !== qc[0]) continue;
+      if (ratio(qc, w) >= threshold) return true;
+    }
+  }
+  return false;
+}
+
+function inBengaluru(lat: number, lon: number): boolean {
+  return (
+    lat >= BLR_BOUNDS.latMin &&
+    lat <= BLR_BOUNDS.latMax &&
+    lon >= BLR_BOUNDS.lonMin &&
+    lon <= BLR_BOUNDS.lonMax
+  );
+}
+
+/** Simplified spellings to retry when the exact name is not found. */
+function localityVariants(locality: string): string[] {
+  const out: string[] = [locality.trim()];
+  const add = (v: string) => {
+    const t = v.replace(/\s+/g, " ").trim();
+    if (t.length > 2 && !out.includes(t)) out.push(t);
+  };
+  // "BommanaHalli Cmc" -> "BommanaHalli"; "Begur Hobli" -> "Begur"
+  add(locality.replace(/\b(cmc|hobli|tmc|town municipal council)\b/gi, ""));
+  // "JP Nagar 5th Phase" -> "JP Nagar"
+  add(
+    locality.replace(/\b\d+(st|nd|rd|th)?\s*(phase|block|stage|sector|main|cross)\b/gi, ""),
+  );
+  // "4th Block, 5th Block Jayanagar" -> each comma part with block numbers stripped
+  for (const part of locality.split(",")) {
+    add(part.replace(/\b\d+(st|nd|rd|th)?\s*(phase|block|stage|sector|main|cross)\b/gi, ""));
+  }
+  return out.slice(0, 4);
 }
 
 export async function geocodeLocality(
   locality: string,
 ): Promise<{ lat: number; lon: number; display_name: string }> {
-  const queries = [
-    `${locality}, Bengaluru, Karnataka, India`,
-    `${locality}, Bangalore, Karnataka, India`,
-    `${locality}, Karnataka, India`,
-  ];
+  const queries: string[] = [];
+  for (const v of localityVariants(locality)) {
+    queries.push(`${v}, Bengaluru, Karnataka, India`);
+  }
+  queries.push(`${locality}, Bangalore, Karnataka, India`);
 
   for (const q of queries) {
     const url = new URL(NOMINATIM_URL);
     url.searchParams.set("q", q);
     url.searchParams.set("format", "json");
-    url.searchParams.set("limit", "1");
+    url.searchParams.set("limit", "5");
     const res = await fetch(url, {
       headers: { "User-Agent": USER_AGENT, Accept: "application/json" },
       signal: AbortSignal.timeout(20_000),
@@ -144,19 +238,20 @@ export async function geocodeLocality(
       lon: string;
       display_name?: string;
     }>;
-    if (results.length > 0) {
-      return {
-        lat: parseFloat(results[0].lat),
-        lon: parseFloat(results[0].lon),
-        display_name: results[0].display_name ?? q,
-      };
+    // Take the first hit that is actually inside Greater Bengaluru.
+    for (const r of results) {
+      const lat = parseFloat(r.lat);
+      const lon = parseFloat(r.lon);
+      if (inBengaluru(lat, lon)) {
+        return { lat, lon, display_name: r.display_name ?? q };
+      }
     }
   }
 
   throw new GeocodeError(locality);
 }
 
-function matchReraProjects(
+export function matchReraProjects(
   projects: ReraProject[],
   locality: string,
 ): ReraProject[] {
@@ -169,11 +264,12 @@ function matchReraProjects(
   return matched;
 }
 
-function computeReraScore(projects: ReraProject[]): {
-  score: number;
+export function computeReraScore(projects: ReraProject[]): {
+  score: number | null;
   avg_complaints: number | null;
 } {
-  if (projects.length === 0) return { score: 75.0, avg_complaints: null };
+  // No matching projects = no evidence either way. Do not invent a score.
+  if (projects.length === 0) return { score: null, avg_complaints: null };
   const avg =
     projects.reduce((sum, p) => sum + (p.complaints_count ?? 0), 0) /
     projects.length;
@@ -401,7 +497,10 @@ export async function buildMapAmenities(
 function computeAmenityScore(counts: AmenityCounts): number {
   const weighted =
     counts.metro * 4 + counts.hospital * 3 + counts.school * 2 + counts.park * 2;
-  return Math.max(0, Math.min(100, weighted * (100 / 15)));
+  return Math.max(
+    0,
+    Math.min(100, weighted * (100 / AMENITY_FULL_SCORE_POINTS)),
+  );
 }
 
 export async function scoreLocality(
@@ -428,13 +527,18 @@ export async function scoreLocality(
   }
 
   const amenityScore = computeAmenityScore(counts);
-  const neighbourhoodScore = round1(0.45 * reraScore + 0.55 * amenityScore);
+  const reraAvailable = reraScore !== null;
+  // Without RERA data the score is the amenity score alone (weights 0 / 1).
+  const neighbourhoodScore = reraAvailable
+    ? round1(0.45 * reraScore + 0.55 * amenityScore)
+    : round1(amenityScore);
 
   return {
     locality,
     centre_lat: lat,
     centre_lon: lon,
-    rera_score: round1(reraScore),
+    rera_score: reraScore === null ? null : round1(reraScore),
+    rera_data_available: reraAvailable,
     amenity_score: round1(amenityScore),
     neighbourhood_score: neighbourhoodScore,
     rera_projects_matched: matched.length,
@@ -443,8 +547,9 @@ export async function scoreLocality(
     details: {
       geocoded_as: display_name,
       radius_km: RADIUS_KM,
-      rera_weight: 0.45,
-      amenity_weight: 0.55,
+      rera_weight: reraAvailable ? 0.45 : 0,
+      amenity_weight: reraAvailable ? 0.55 : 1,
+      amenity_full_score_points: AMENITY_FULL_SCORE_POINTS,
     },
   };
 }
@@ -492,6 +597,7 @@ export function scoreResultToDict(r: ScoreResult): Record<string, unknown> {
     locality: r.locality,
     neighbourhood_score: r.neighbourhood_score,
     rera_score: r.rera_score,
+    rera_data_available: r.rera_data_available,
     amenity_score: r.amenity_score,
     amenity_breakdown: {
       hospital: r.amenity_counts.hospital,

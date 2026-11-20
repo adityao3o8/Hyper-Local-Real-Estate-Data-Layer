@@ -51,7 +51,7 @@ export function ScoreRadialChart({
 }: {
   overall: number;
   amenity: number;
-  rera: number;
+  rera: number | null;
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { amount: 0.4, once: true });
@@ -59,7 +59,9 @@ export function ScoreRadialChart({
   const labels = [
     { score: overall, label: "Overall", color: scoreColor(overall) },
     { score: amenity, label: "Amenity", color: scoreColor(amenity) },
-    { score: rera, label: "RERA", color: scoreColor(rera) },
+    ...(rera == null
+      ? []
+      : [{ score: rera, label: "RERA", color: scoreColor(rera) }]),
   ];
 
   return (
@@ -68,7 +70,9 @@ export function ScoreRadialChart({
         <svg width={240} height={240} viewBox="0 0 240 240">
           <ScoreArc radius={100} score={overall} color={scoreColor(overall)} delay={0} inView={inView} />
           <ScoreArc radius={78} score={amenity} color={scoreColor(amenity)} delay={0.15} inView={inView} />
-          <ScoreArc radius={56} score={rera} color={scoreColor(rera)} delay={0.3} inView={inView} />
+          {rera != null && (
+            <ScoreArc radius={56} score={rera} color={scoreColor(rera)} delay={0.3} inView={inView} />
+          )}
         </svg>
       </div>
       <div className="mt-3 flex justify-center gap-6">

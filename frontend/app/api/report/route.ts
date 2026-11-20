@@ -63,12 +63,40 @@ export async function GET(request: NextRequest) {
   }
   if (amenitiesSettled.status === "rejected") {
     return handleException(amenitiesSettled.reason);
+  // 2. AI report (Groq). A missing key is a deployment error and stays loud;
+  // an upstream Groq failure must not throw away the score and map.
+  let groqKey: string;
+  try {
+    groqKey = requireGroqKey();
+  } catch (err) {
+    return handleException(err);
+  }
+  let aiReport: string;
+  let aiReportAvailable = true;
+  try {
+    aiReport = await generateReport(scoreData, groqKey);
+    if (!aiReport) throw new Error("empty report");
+  } catch {
+    aiReportAvailable = false;
+    aiReport =
+      "The AI summary is temporarily unavailable. The scores, amenity counts and map for this locality are unaffected.";
+  }
+
+  // 3. Map amenities
+  let mapAmenities;
+  try {
+    mapAmenities = await buildMapAmenities(result.centre_lat, result.centre_lon);
+  } catch (err) {
+    return handleException(err);
   }
 
   const payload: Record<string, unknown> = {
     ...scoreData,
     ai_report: aiSettled.value,
     amenities: amenitiesSettled.value,
+    ai_report: aiReport,
+    ai_report_available: aiReportAvailable,
+    amenities: mapAmenities,
   };
 
   if (pricesSettled.status === "fulfilled" && pricesSettled.value) {

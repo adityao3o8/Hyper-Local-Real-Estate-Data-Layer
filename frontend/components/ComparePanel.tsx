@@ -10,10 +10,19 @@ function Delta({
   compare,
   compareName,
 }: {
-  primary: number;
-  compare: number;
+  primary: number | null;
+  compare: number | null;
   compareName: string;
 }) {
+  if (primary == null || compare == null) {
+    return (
+      <span
+        style={{ color: "#52525e", fontFamily: "var(--font-space-mono), monospace", fontSize: "11px" }}
+      >
+        no RERA data to compare
+      </span>
+    );
+  }
   const diff = primary - compare;
   const better = diff > 0;
   const color = better ? "#16C784" : diff < 0 ? "#EF4444" : "#52525e";
